@@ -47,4 +47,7 @@ export default {
   sepolia: {
     InitialDeniedTokens: [],
   },
+  telosTestnet: {
+    InitialDeniedTokens: [],
+  },
 };

@@ -42,4 +42,7 @@ export default {
   fantom: {
     admin: '0x4fbe899d37fb7514adf2f41B0630E018Ec275a0C',
   },
+  telosTestnet: {
+    admin: '0xc9C388255295929E02C59e86Aa9EeFeA076307F9',
+  },
 };

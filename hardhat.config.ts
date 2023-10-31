@@ -7,6 +7,9 @@ import 'tsconfig-paths/register';
 
 import './src/helpers/setupTests';
 
+import dotenv from 'dotenv';
+
+dotenv.config();
 import { task } from 'hardhat/config';
 import { TASK_TEST } from 'hardhat/builtin-tasks/task-names';
 import { HardhatRuntimeEnvironment } from 'hardhat/types';
@@ -18,6 +21,7 @@ import { checkArtifact, extractArtifact } from './src/artifact';
 import test from './src/test';
 import Task, { TaskMode } from './src/task';
 import Verifier from './src/verifier';
+import SourcifyVerifier from './src/sourcifyVerifier';
 import logger, { Logger } from './src/logger';
 import {
   checkActionIds,
@@ -43,7 +47,8 @@ task('deploy', 'Run deployment task')
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const apiKey = args.key ?? (hre.config.networks[hre.network.name] as any).verificationAPIKey;
       const verifier = apiKey ? new Verifier(hre.network, apiKey) : undefined;
-      await new Task(args.id, TaskMode.LIVE, hre.network.name, verifier).run(args);
+      const sourcifyVerifier = new SourcifyVerifier(hre.network);
+      await new Task(args.id, TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(args);
     }
   );
 
@@ -300,9 +305,40 @@ task(
 
 task(TASK_TEST).addOptionalParam('id', 'Specific task ID of the fork test to run.').setAction(test);
 
+const PRIVATE_KEY = process.env.PRIVATE_KEY;
+
 export default {
   mocha: {
     timeout: 600000,
+  },
+  networks: {
+    hardhat: {
+      // ... other hardhat specific configurations
+    },
+    telosTestnet: {
+      url: 'https://testnet.telos.net/evm',
+      chainId: 41,
+      accounts: [PRIVATE_KEY],
+      // ... other configurations specific to this network
+    },
+    celoAlfajores: {
+      url: 'https://alfajores-forno.celo-testnet.org',
+      chainId: 44787,
+      accounts: [PRIVATE_KEY],
+      // ... other configurations specific to this network
+    },
+    gnosisChiado: {
+      url: 'https://rpc.chiadochain.net',
+      chainId: 10200,
+      accounts: [PRIVATE_KEY],
+      // ... other configurations specific to this network
+    },
+    kavaTestnet: {
+      url: 'https://evm.testnet.kava.io',
+      chainId: 2221,
+      accounts: [PRIVATE_KEY],
+      // ... other configurations specific to this network
+    },
   },
   solidity: {
     version: '0.7.1',
@@ -355,4 +391,5 @@ export default {
       },
     ],
   },
+  localNetworksConfig: '~/.hardhat/networks.ts',
 };

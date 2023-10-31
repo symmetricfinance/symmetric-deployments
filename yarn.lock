@@ -46,6 +46,7 @@ __metadata:
     "@nomiclabs/hardhat-waffle": "npm:^2.0.5"
     "@solidity-parser/parser": "npm:^0.14.5"
     "@types/chai": "npm:^4"
+    "@types/dotenv": "npm:^8.2.0"
     "@types/lodash": "npm:^4.14.186"
     "@types/lodash.range": "npm:^3.2.7"
     "@types/mocha": "npm:^10"
@@ -56,6 +57,7 @@ __metadata:
     chai: "npm:^4.3.6"
     chalk: "npm:^4.1.2"
     decimal.js: "npm:^10.4.3"
+    dotenv: "npm:^16.3.1"
     eslint: "npm:^8.26.0"
     eslint-plugin-mocha-no-only: "npm:^1.1.1"
     eslint-plugin-prettier: "npm:^4.2.1"
@@ -1469,6 +1471,15 @@ __metadata:
   version: 4.3.5
   resolution: "@types/chai@npm:4.3.5"
   checksum: 3fba3f516c45abce7b1478d60a5655aa7f2e04a77d0603c1396f060af98feebd914683e501fac4d993670067c320adf20ad64fbbde9608412520f0887603fdef
+  languageName: node
+  linkType: hard
+
+"@types/dotenv@npm:^8.2.0":
+  version: 8.2.0
+  resolution: "@types/dotenv@npm:8.2.0"
+  dependencies:
+    dotenv: "npm:*"
+  checksum: 13f90a36f73c7430627f84e5bdfdbd77bfb286240dd84524fe55d20c6a9aee1b5bb3dc1f034712aadb00cadf41e0e2b22d724b4435c4da6eedae7ab6bac4dce4
   languageName: node
   linkType: hard
 
@@ -4389,6 +4400,13 @@ __metadata:
   version: 0.1.2
   resolution: "dom-walk@npm:0.1.2"
   checksum: d1cb40e62dd73d55797ee4c16798159f4bfd88bbe5491aafd3f19cf9e5a44cac5c2d6511d10afd890bc6c6b18864bd8aa90d9fb17f6ab4c3d2ceb03c884d5f47
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:*, dotenv@npm:^16.3.1":
+  version: 16.3.1
+  resolution: "dotenv@npm:16.3.1"
+  checksum: 10accb903da092a279d5a952c54290c0980c1c3ab0767b0dbc3013526593ebc98944e26352c9bef1d0fe93589a7c78e4810daae1bd53c7432c69997b17de0b3d
   languageName: node
   linkType: hard
 

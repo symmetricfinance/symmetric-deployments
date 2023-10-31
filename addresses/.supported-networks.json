@@ -46,5 +46,21 @@
   "fantom": {
     "chainId": 250,
     "block-explorer": "https://ftmscan.com"
+  },
+  "telos-testnet": {
+    "chainId": 41,
+    "block-explorer": "https://testnet.teloscan.io/"
+  },
+  "alfajores": {
+    "chainId": 44787,
+    "block-explorer": "https://alfajores.celoscan.io/"
+  },
+  "chiado": {
+    "chainId": 10200,
+    "block-explorer": "https://gnosis-chiado.blockscout.com/"
+  },
+  "kava-testnet": {
+    "chainId": 2221,
+    "block-explorer": "https://testnet.kavascan.com/"
   }
 }

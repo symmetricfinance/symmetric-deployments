@@ -24,4 +24,7 @@ export default {
   sepolia: {
     BPT: '0x650C15c9CFc6063e5046813f079774f56946dF21', // BPT of an 80-20 BAL-WETH Pool using test BAL
   },
+  telosTestnet: {
+    BPT: '0x037D0B5511eFF40fF31dA11A9A0619efC3B87EC9', // SPT of an 80-20 SYMM-TLOS Pool using test SYMM
+  },
 };

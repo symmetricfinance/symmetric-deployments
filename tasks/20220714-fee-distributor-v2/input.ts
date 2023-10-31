@@ -18,4 +18,7 @@ export default {
   sepolia: {
     startTime: 1683763200, // Thursday, May 11 2023 00:00:00 UTC
   },
+  telosTestnet: {
+    startTime: 261831000,
+  },
 };

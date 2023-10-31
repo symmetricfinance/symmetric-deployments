@@ -78,5 +78,18 @@ export default async (task: Task, { force, from }: TaskRunOptions = {}): Promise
       newPoolParams.owner,
       newPoolParams.swapEnabledOnStart,
     ]);
+
+    await task.sourcifyVerify('LiquidityBootstrappingPool', mockPool.address, [
+      input.Vault,
+      newPoolParams.name,
+      newPoolParams.symbol,
+      newPoolParams.tokens,
+      newPoolParams.weights,
+      newPoolParams.swapFeePercentage,
+      pauseWindowDuration,
+      bufferPeriodDuration,
+      newPoolParams.owner,
+      newPoolParams.swapEnabledOnStart,
+    ]);
   }
 };

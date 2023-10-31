@@ -7,6 +7,8 @@ import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers';
 
 import logger from './logger';
 import Verifier from './verifier';
+import SourcifyVerifier from './sourcifyVerifier';
+
 import { deploy, deploymentTxData, instanceAt } from './contracts';
 
 import {
@@ -50,13 +52,21 @@ export default class Task {
 
   _network?: Network;
   _verifier?: Verifier;
+  _sourcifyVerifier?: SourcifyVerifier;
 
-  constructor(idAlias: string, mode: TaskMode, network?: Network, verifier?: Verifier) {
+  constructor(
+    idAlias: string,
+    mode: TaskMode,
+    network?: Network,
+    verifier?: Verifier,
+    sourcifyVerifier?: SourcifyVerifier
+  ) {
     if (network && !NETWORKS.includes(network)) throw Error(`Unknown network ${network}`);
     this.id = this._findTaskId(idAlias);
     this.mode = mode;
     this._network = network;
     this._verifier = verifier;
+    this._sourcifyVerifier = sourcifyVerifier;
   }
 
   get network(): string {
@@ -102,6 +112,7 @@ export default class Task {
     const instance = await this.deploy(name, args, from, force, libs);
 
     await this.verify(name, instance.address, args, libs);
+    await this.sourcifyVerify(name, instance.address, libs);
     return instance;
   }
 
@@ -154,6 +165,21 @@ export default class Task {
       logger.success(`Verified contract ${name} at ${url}`);
     } catch (error) {
       logger.error(`Failed trying to verify ${name} at ${address}: ${error}`);
+    }
+  }
+
+  async sourcifyVerify(name: string, address: string, libs?: Libraries): Promise<void> {
+    if (this.mode !== TaskMode.LIVE) {
+      return;
+    }
+
+    try {
+      if (!this._sourcifyVerifier)
+        return logger.warn('Skipping contract verification on sourcify, no verifier defined');
+      const url = await this._sourcifyVerifier.call(this, name, address, libs);
+      logger.success(`Verified contract on sourcify ${name} at ${url}`);
+    } catch (error) {
+      logger.error(`Failed trying to verify on sourcify ${name} at ${address}: ${error}`);
     }
   }
 

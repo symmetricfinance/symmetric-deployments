@@ -23,3 +23,7 @@ dist/
 pkg/balancer-js/src/typechain/*
 
 test.json
+
+networks.json
+
+.env

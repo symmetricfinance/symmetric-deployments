@@ -22,4 +22,7 @@ export default {
   sepolia: {
     BAL: TestBALTask.output({ network: 'sepolia' }).TestBalancerToken,
   },
+  telosTestnet: {
+    BAL: TestBALTask.output({ network: 'telosTestnet' }).TestBalancerToken,
+  },
 };

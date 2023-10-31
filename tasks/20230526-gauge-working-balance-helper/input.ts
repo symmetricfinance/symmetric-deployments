@@ -63,4 +63,10 @@ export default {
       .VotingEscrowDelegationProxy,
     ReadTotalSupplyFromVE: true,
   },
+  telosTestnet: {
+    VotingEscrowDelegationProxy: new Task('20220325-ve-delegation', TaskMode.READ_ONLY).output({
+      network: 'telosTestnet',
+    }).VotingEscrowDelegationProxy,
+    ReadTotalSupplyFromVE: true,
+  },
 };

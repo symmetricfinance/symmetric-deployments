@@ -18,6 +18,10 @@ export const NETWORKS = [
   'sepolia',
   'base',
   'fantom',
+  'telosTestnet',
+  'celoAlfajores',
+  'gnosisChiado',
+  'kavaTestnet',
 ];
 
 export type Network = (typeof NETWORKS)[number];

@@ -19,4 +19,7 @@ export default {
   sepolia: {
     InitialAllowedAddresses: [],
   },
+  telosTestnet: {
+    InitialAllowedAddresses: [],
+  },
 };
