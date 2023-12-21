@@ -22,4 +22,11 @@ export default {
   telosTestnet: {
     InitialAllowedAddresses: [],
   },
+  telos: {
+    InitialAllowedAddresses: [
+      '0xBd8911e8477a7279f085F473f46A6b9AB54385E7',
+      '0xa29F1CA1957c164877F6A277C9791ACA3Ad4BD6D',
+      '0x42613DDb353730cf2404BcFf2034c9007f968192',
+    ],
+  },
 };

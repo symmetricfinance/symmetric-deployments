@@ -306,6 +306,7 @@ task(
 task(TASK_TEST).addOptionalParam('id', 'Specific task ID of the fork test to run.').setAction(test);
 
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
+const TEST_PRIVATE_KEY = process.env.TEST_PRIVATE_KEY;
 
 export default {
   mocha: {
@@ -315,21 +316,60 @@ export default {
     hardhat: {
       // ... other hardhat specific configurations
     },
+    telos: {
+      url: 'https://mainnet.telos.net/evm',
+      chainId: 40,
+      accounts: [PRIVATE_KEY],
+      // ... other configurations specific to this network
+    },
     telosTestnet: {
       url: 'https://testnet.telos.net/evm',
       chainId: 41,
+      accounts: [TEST_PRIVATE_KEY],
+      // ... other configurations specific to this network
+    },
+    celo: {
+      url: 'https://1rpc.io/celo',
+      chainId: 42220,
       accounts: [PRIVATE_KEY],
+      urls: {
+        apiURL: 'https://api.celoscan.com/api',
+        browserURL: 'https://celoscan.com/',
+      },
+      verificationAPIKey: process.env.CELO_API_KEY,
       // ... other configurations specific to this network
     },
     celoAlfajores: {
       url: 'https://alfajores-forno.celo-testnet.org',
       chainId: 44787,
       accounts: [PRIVATE_KEY],
+      urls: {
+        apiURL: 'https://api-alfajores.celoscan.io/api',
+        browserURL: 'https://alfajores.celoscan.com/',
+      },
+      verificationAPIKey: process.env.CELO_API_KEY,
+      // ... other configurations specific to this network
+    },
+    gnosis: {
+      url: 'https://rpc.gnosischain.com',
+      chainId: 100,
+      accounts: [PRIVATE_KEY],
+      urls: {
+        apiURL: 'https://api.gnosisscan.com/api',
+        browserURL: 'https://gnosisscan.com/',
+      },
+      verificationAPIKey: process.env.GNOSIS_API_KEY,
       // ... other configurations specific to this network
     },
     gnosisChiado: {
       url: 'https://rpc.chiadochain.net',
       chainId: 10200,
+      accounts: [PRIVATE_KEY],
+      // ... other configurations specific to this network
+    },
+    kava: {
+      url: 'https://evm.kava.io',
+      chainId: 2222,
       accounts: [PRIVATE_KEY],
       // ... other configurations specific to this network
     },

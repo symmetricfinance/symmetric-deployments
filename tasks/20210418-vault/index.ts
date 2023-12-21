@@ -8,8 +8,12 @@ export default async (task: Task, { force, from }: TaskRunOptions = {}): Promise
 
   // The vault automatically also deploys the protocol fees collector: we must verify it
   const feeCollector = await vault.getProtocolFeesCollector();
-  const feeCollectorArgs = [vault.address]; // See ProtocolFeesCollector constructor
+  const feeCollectorArgs = [vault.address];
+
+  // See ProtocolFeesCollector constructor
   await task.verify('ProtocolFeesCollector', feeCollector, feeCollectorArgs);
+  await task.sourcifyVerify('ProtocolFeesCollector', feeCollector);
+
   await task.save({ ProtocolFeesCollector: feeCollector });
 
   const helpersArgs = [vault.address];

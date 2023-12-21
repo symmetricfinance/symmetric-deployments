@@ -10,7 +10,6 @@ export type VaultDeployment = {
 
 const Authorizer = new Task('20210418-authorizer', TaskMode.READ_ONLY);
 const WETH = new Task('00000000-tokens', TaskMode.READ_ONLY);
-
 export default {
   Authorizer,
   pauseWindowDuration: 3 * MONTH,

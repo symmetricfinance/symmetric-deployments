@@ -1,0 +1,31 @@
+{
+  "20210418-vault": {
+    "Vault": {
+      "useAdaptor": false,
+      "actionIds": {
+        "batchSwap(uint8,(bytes32,uint256,uint256,uint256,bytes)[],address[],(address,bool,address,bool),int256[],uint256)": "0x4521b9eb768b474b928d824fbaa7129d7732b3871db795d431edcf2d9bcdc14e",
+        "deregisterTokens(bytes32,address[])": "0x970d48c6dd1e4778c33ae340aa19f4a3e4bc92f47e1659f979fa93cc0540bd6c",
+        "exitPool(bytes32,address,address,(address[],uint256[],bytes,bool))": "0x9b0ed65cc1ef08c306e459c3e1a9b11d66bc508adc77158dbb8d74e3a8dd7f02",
+        "flashLoan(address,address[],uint256[],bytes)": "0x3064dae62228b9640e3f71f54fc916e3fc18186e8d74b2f5421427c2ceef1db6",
+        "joinPool(bytes32,address,address,(address[],uint256[],bytes,bool))": "0x05bf7f4031d8a1f514004df178737df78e6f78258aac3015d79437846916f13d",
+        "managePoolBalance((uint8,bytes32,address,uint256)[])": "0xbb58b8a013d7fefa61bec94e798293f4e180c9564be9c4ba43aea304c138ac9c",
+        "manageUserBalance((uint8,address,uint256,address,address)[])": "0x0737158721cfe74a6aa45bf71a4be6f0e66ba9e4ef50ccf226ee3e79e320bf77",
+        "queryBatchSwap(uint8,(bytes32,uint256,uint256,uint256,bytes)[],address[],(address,bool,address,bool))": "0x381551a732b6674384b6f9a12fa95dfa0b03a7f24b2468e988911663a7ad541b",
+        "registerPool(uint8)": "0x8ee352d55c8adb995a80061af3388281f69231e109b7fb406f506cf210ff1c4b",
+        "registerTokens(bytes32,address[],address[])": "0x8072285da9f726ca73f1dc687b62fb74579f99272f167570bd33f304cae233c7",
+        "setAuthorizer(address)": "0x879d765293f7fa0b639dc59605d43b1b43b5f38bfb39e1e138f65d46548b71f0",
+        "setPaused(bool)": "0xe152010ea44a22b89208d29399858ad5c33351e7cfee799763f23bb1c0aa59b2",
+        "setRelayerApproval(address,address,bool)": "0x854e71f7036cd2973b89734f375d3f4c8d96d63254c50459c190391c62e3e138",
+        "swap((bytes32,uint8,address,address,uint256,bytes),(address,bool,address,bool),uint256,uint256)": "0xf18c34a134c60ab308655d9201d87d187ca6b2fd1d5943c8462ef58ddfcae4d4"
+      }
+    },
+    "ProtocolFeesCollector": {
+      "useAdaptor": false,
+      "actionIds": {
+        "setFlashLoanFeePercentage(uint256)": "0xd9bc190ddbf9ac73cff44beeff6b42f39372e93e8860098bd3af51281c75a32e",
+        "setSwapFeePercentage(uint256)": "0x37fcd0cb95cfa3cb8de4d97461354809968e3b73dc9c67f9ff75ba1809d102a1",
+        "withdrawCollectedFees(address[],uint256[],address)": "0x0262ea4bd7d3b7db6cf474e2ecc9b62c1d036586dcf38769d51b2c243ca0d85a"
+      }
+    }
+  }
+}

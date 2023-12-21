@@ -18,6 +18,9 @@ export default {
   fantom: {
     Admin: '0x9d0327954009C59eD70Dc98b7726e911879d4D92',
   },
+  telos: {
+    Admin: '0x7255Db0d1C1B93Fb756157074fa0613Aa6878F31',
+  },
   telosTestnet: {
     Admin: '0x91382D68A668D541C9d5Cdb4fCe62d8A1Eb87b56',
   },

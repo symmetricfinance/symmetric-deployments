@@ -9,5 +9,6 @@ export default async (task: Task, { force, from }: TaskRunOptions = {}): Promise
 
   const implementation = await factory.getGaugeImplementation();
   await task.verify('SingleRecipientGauge', implementation, [input.BalancerMinter]);
+
   await task.save({ SingleRecipientGauge: implementation });
 };

@@ -110,5 +110,6 @@ export default async (task: Task, { force, from }: TaskRunOptions = {}): Promise
       mockPoolArgs.settings,
       mockPoolArgs.owner,
     ]);
+    await task.sourcifyVerify('ManagedPool', mockPool.address);
   }
 };

@@ -6,9 +6,9 @@ export type VeBoostV2Deployment = {
 };
 
 const VotingEscrow = new Task('20220325-gauge-controller', TaskMode.READ_ONLY);
-const PreseededVotingEscrowDelegation = new Task('20220530-preseeded-voting-escrow-delegation', TaskMode.READ_ONLY);
+const VotingEscrowDelegation = new Task('20220325-ve-delegation', TaskMode.READ_ONLY);
 
 export default {
   VotingEscrow,
-  PreseededVotingEscrowDelegation,
+  VotingEscrowDelegation,
 };

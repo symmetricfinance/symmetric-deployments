@@ -21,7 +21,7 @@
   ],
   "scripts": {
     "build": "yarn compile",
-    "compile": "tsc && hardhat compile && rm -rf artifacts/build-info",
+    "compile": "tsc && hardhat compile",
     "check": "yarn check-artifacts && yarn check-deployments",
     "check-artifacts": "hardhat check-artifacts",
     "check-network-deployments": "hardhat check-deployments --network",

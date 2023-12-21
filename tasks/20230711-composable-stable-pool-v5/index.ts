@@ -82,5 +82,6 @@ export default async (task: Task, { force, from }: TaskRunOptions = {}): Promise
 
     // We are now ready to verify the Pool
     await task.verify('ComposableStablePool', mockPool.address, [mockPoolArgs]);
+    await task.sourcifyVerify('ComposableStablePool', mockPool.address);
   }
 };

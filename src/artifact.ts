@@ -13,6 +13,7 @@ import fs from 'fs';
  * @param contract - Name of the contract to match. Filename shall be used if undefined.
  */
 export function extractArtifact(task: Task, file?: string, contract?: string): void {
+  console.log(contract);
   const buildInfoDirectory = path.resolve(task.dir(), 'build-info');
   if (existsSync(buildInfoDirectory) && statSync(buildInfoDirectory).isDirectory()) {
     if (file) {
@@ -20,6 +21,7 @@ export function extractArtifact(task: Task, file?: string, contract?: string): v
     } else {
       for (const buildInfoFileName of readdirSync(buildInfoDirectory)) {
         const fileName = path.parse(buildInfoFileName).name;
+        console.log(fileName);
         _extractArtifact(task, fileName, contract);
       }
     }

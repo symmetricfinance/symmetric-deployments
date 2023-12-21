@@ -21,4 +21,7 @@ export default {
   telosTestnet: {
     startTime: 261831000,
   },
+  telos: {
+    startTime: 1701907200, // Thursday, December 7 2023 00:00:00 UTC
+  },
 };

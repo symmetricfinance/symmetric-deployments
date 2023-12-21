@@ -1,0 +1,64 @@
+{
+  "0x16401628486a550ec711bea0379ebd9468eef3d3502d41b2cd41499ab541c1e0": [
+    {
+      "taskId": "20220325-gauge-controller",
+      "contractName": "VotingEscrow",
+      "signature": "checkpoint()",
+      "useAdaptor": true
+    },
+    {
+      "taskId": "20220325-gauge-controller",
+      "contractName": "GaugeController",
+      "signature": "checkpoint()",
+      "useAdaptor": true
+    },
+    {
+      "taskId": "20230215-single-recipient-gauge-factory-v2",
+      "contractName": "SingleRecipientGauge",
+      "signature": "checkpoint()",
+      "useAdaptor": true
+    }
+  ],
+  "0xa05d8bac4451d4f4a2c07a259bd80337b969221606e91e025fd5c3fdd8319f27": [
+    {
+      "taskId": "20220822-mainnet-gauge-factory-v2",
+      "contractName": "LiquidityGaugeV5",
+      "signature": "killGauge()",
+      "useAdaptor": true
+    },
+    {
+      "taskId": "20230215-single-recipient-gauge-factory-v2",
+      "contractName": "SingleRecipientGauge",
+      "signature": "killGauge()",
+      "useAdaptor": true
+    }
+  ],
+  "0xb0f1d805e718278090176137c58c9d47ac9d32e66e248c32686b8c7e430e2b56": [
+    {
+      "taskId": "20220822-mainnet-gauge-factory-v2",
+      "contractName": "LiquidityGaugeV5",
+      "signature": "setRelativeWeightCap(uint256)",
+      "useAdaptor": true
+    },
+    {
+      "taskId": "20230215-single-recipient-gauge-factory-v2",
+      "contractName": "SingleRecipientGauge",
+      "signature": "setRelativeWeightCap(uint256)",
+      "useAdaptor": true
+    }
+  ],
+  "0x9c4b9b75d860952ffa82e423658ffa4ff20511d45555253da690e94bd3017338": [
+    {
+      "taskId": "20220822-mainnet-gauge-factory-v2",
+      "contractName": "LiquidityGaugeV5",
+      "signature": "unkillGauge()",
+      "useAdaptor": true
+    },
+    {
+      "taskId": "20230215-single-recipient-gauge-factory-v2",
+      "contractName": "SingleRecipientGauge",
+      "signature": "unkillGauge()",
+      "useAdaptor": true
+    }
+  ]
+}

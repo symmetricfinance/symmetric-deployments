@@ -89,5 +89,7 @@ export default async (task: Task, { force, from }: TaskRunOptions = {}): Promise
       mockPoolArgs.owner,
       mockPoolArgs.version,
     ]);
+
+    await task.sourcifyVerify('WeightedPool', mockPool.address);
   }
 };

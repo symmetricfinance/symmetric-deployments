@@ -12,5 +12,6 @@ export default async (task: Task, { force, from }: TaskRunOptions = {}): Promise
 
   const relayerArgs = [input.Vault, relayerLibrary.address]; // See BalancerRelayer's constructor
   await task.verify('BalancerRelayer', relayer, relayerArgs);
+  await task.sourcifyVerify('BalancerRelayer', relayer);
   await task.save({ BalancerRelayer: relayer });
 };
