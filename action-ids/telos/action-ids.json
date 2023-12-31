@@ -165,5 +165,30 @@
         "unkillGauge()": "0x9c4b9b75d860952ffa82e423658ffa4ff20511d45555253da690e94bd3017338"
       }
     }
+  },
+  "20230519-gauge-adder-v4": {
+    "GaugeAdder": {
+      "useAdaptor": false,
+      "actionIds": {
+        "addGauge(address,string)": "0x7f86554025d25dbcc3b8c370936351d43df8d936d8e767af0ec2bf5eeec2dbcd",
+        "addGaugeType(string)": "0xcfab0aa65bc9854b59fd5b28578c5f77e72c684f86815531eebff955b8962230",
+        "setGaugeFactory(address,string)": "0x1c768c3caf409a4659ed33a6658516704b361a3bc8e545ca8c52e5a3273f0c45"
+      }
+    }
+  },
+  "20230915-stakeless-gauge-checkpointer-v2": {
+    "StakelessGaugeCheckpointer": {
+      "useAdaptor": false,
+      "actionIds": {
+        "addGauges(string,address[])": "0x03504614d47da3dae7daa96e8e382a00e1d73b5ed25e6a45b61ffd188ff47399",
+        "addGaugesWithVerifiedType(string,address[])": "0x666ce4fd28759f8eb6536b935c60ec96e665737183faa1f804b044dcb4532408",
+        "checkpointAllGaugesAboveRelativeWeight(uint256)": "0xe558f2edb61ff7a5fbdb087b309e80dfa79da84fb6ee93fbf7b1fc69fee1ccfd",
+        "checkpointGaugesOfTypesAboveRelativeWeight(string[],uint256)": "0x34b076de936c65f83d7b4ecbc34f054e890877ffe26e6fa713fca81cba319803",
+        "checkpointMultipleGauges(string[],address[])": "0x7c45a28f0dee1d9b6c1d383169fbc5fb211c4e177e62e6681897e3c0909a9399",
+        "checkpointMultipleGaugesOfMatchingType(string,address[])": "0xb0f20b060c4c08beb1141a17272a0fa5d335de3c52fef43fef10c3335132f8d3",
+        "checkpointSingleGauge(string,address)": "0x82d14f4da435d2b8e8a8ecbfd89ea156593ec71b1298245a940ecf9d648f3a02",
+        "removeGauges(string,address[])": "0xcf45a96f2f8b0560ab5181120c8d20d7933d8e70385a1d176b88d67d141544ea"
+      }
+    }
   }
 }
