@@ -153,6 +153,15 @@
     ],
     "status": "ACTIVE"
   },
+  "20221124-authorizer-adaptor-entrypoint": {
+    "contracts": [
+      {
+        "name": "AuthorizerAdaptorEntrypoint",
+        "address": "0x6a66Da23A789b648a60632da4a5A635558372203"
+      }
+    ],
+    "status": "ACTIVE"
+  },
   "20230215-single-recipient-gauge-factory-v2": {
     "contracts": [
       {
@@ -162,6 +171,10 @@
       {
         "name": "SingleRecipientGauge",
         "address": "0xc0A740cDd1C647d9c77367E47f0D0c253140E6e3"
+      },
+      {
+        "name": "VTSYMMGauge",
+        "address": "0x91132ddd744d00d1954b3ee51ffcfde2518bba4c"
       }
     ],
     "status": "ACTIVE"
@@ -186,7 +199,7 @@
         "address": "0x12b89478C9ab7C38579Cfbb90CD3afb40d2762e2"
       }
     ],
-    "status": "ACTIVE"
+    "status": "DEPRECATED"
   },
   "20230320-weighted-pool-v4": {
     "contracts": [
@@ -234,6 +247,24 @@
     ],
     "status": "ACTIVE"
   },
+  "20230414-authorizer-wrapper": {
+    "contracts": [
+      {
+        "name": "AuthorizerWithAdaptorValidation",
+        "address": "0x9E192E96c668891E59CD39138905A5bcDFA03a2d"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20230519-gauge-adder-v4": {
+    "contracts": [
+      {
+        "name": "GaugeAdder",
+        "address": "0xb95B9FA13Afb83542d3a73B10F040cC3AAFc844A"
+      }
+    ],
+    "status": "ACTIVE"
+  },
   "20230711-composable-stable-pool-v5": {
     "contracts": [
       {
@@ -243,6 +274,32 @@
       {
         "name": "MockComposableStablePool",
         "address": "0x8Fb9AE94AC6869Bb10C0eb46Fb2500Ffe2706dBe"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20230915-stakeless-gauge-checkpointer-v2": {
+    "contracts": [
+      {
+        "name": "StakelessGaugeCheckpointer",
+        "address": "0x808e36CFfC8EA806a545902C0a9Bf4D1Db236dc5"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20231031-batch-relayer-v6": {
+    "contracts": [
+      {
+        "name": "BatchRelayerLibrary",
+        "address": "0xB8f48b5AA39ec2CE41b0C38875B919214C3DBbB8"
+      },
+      {
+        "name": "BatchRelayerQueryLibrary",
+        "address": "0x21f4f40996286DD0fc164c0e00EbA377ec84a64b"
+      },
+      {
+        "name": "BalancerRelayer",
+        "address": "0x6259FC97C11D08003BcF93448627F9930EbF5166"
       }
     ],
     "status": "ACTIVE"
