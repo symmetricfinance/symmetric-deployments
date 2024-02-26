@@ -28,4 +28,7 @@ export default {
   telos: {
     BAL: '0xd5f2a24199C3DFc44C1Bf8B1C01aB147809434Ca',
   },
+  meterTestnet: {
+    BAL: '0x7E552a5965F7B13EFC4A6D3173304eFC175d7fBc',
+  },
 };

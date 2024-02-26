@@ -20,6 +20,8 @@ export const NETWORKS = [
   'fantom',
   'telos',
   'telosTestnet',
+  'meter',
+  'meterTestnet',
   'celo',
   'celoAlfajores',
   'gnosisChiado',

@@ -432,6 +432,18 @@ export default {
       accounts: [TEST_PRIVATE_KEY],
       // ... other configurations specific to this network
     },
+    meter: {
+      url: 'https://rpc.meter.io',
+      chainId: 82,
+      accounts: [PRIVATE_KEY],
+      // ... other configurations specific to this network
+    },
+    meterTestnet: {
+      url: 'https://rpctest.meter.io/',
+      chainId: 83,
+      accounts: [TEST_PRIVATE_KEY],
+      // ... other configurations specific to this network
+    },
     celo: {
       url: 'https://1rpc.io/celo',
       chainId: 42220,

@@ -48,4 +48,7 @@ export default {
   telosTestnet: {
     admin: '0xc9C388255295929E02C59e86Aa9EeFeA076307F9',
   },
+  meterTestnet: {
+    admin: '0x7255Db0d1C1B93Fb756157074fa0613Aa6878F31',
+  },
 };
