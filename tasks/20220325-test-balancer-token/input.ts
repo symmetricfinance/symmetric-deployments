@@ -27,4 +27,7 @@ export default {
   meterTestnet: {
     Admin: '0x91382D68A668D541C9d5Cdb4fCe62d8A1Eb87b56',
   },
+  artelaTestnet: {
+    Admin: '0x91382D68A668D541C9d5Cdb4fCe62d8A1Eb87b56',
+  },
 };

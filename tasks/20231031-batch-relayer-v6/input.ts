@@ -89,4 +89,9 @@ export default {
     BalancerMinter: L2BalancerPseudoMinter.output({ network: 'base' }).L2BalancerPseudoMinter,
     CanCallUserCheckpoint: true,
   },
+  artelaTestnet: {
+    wstETH: ZERO_ADDRESS,
+    BalancerMinter: ZERO_ADDRESS,
+    CanCallUserCheckpoint: false,
+  },
 };

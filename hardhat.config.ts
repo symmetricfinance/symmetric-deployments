@@ -483,17 +483,15 @@ export default {
       accounts: [PRIVATE_KEY],
       // ... other configurations specific to this network
     },
-    kava: {
-      url: 'https://evm.kava.io',
-      chainId: 2222,
-      accounts: [PRIVATE_KEY],
-      // ... other configurations specific to this network
-    },
-    kavaTestnet: {
-      url: 'https://evm.testnet.kava.io',
-      chainId: 2221,
-      accounts: [PRIVATE_KEY],
-      // ... other configurations specific to this network
+    artelaTestnet: {
+      url: 'https://betanet-rpc1.artela.network',
+      chainId: 11822,
+      accounts: [TEST_PRIVATE_KEY],
+      urls: {
+        apiURL: 'https://betanet-scan.artela.network/api',
+        browserURL: 'https://betanet-scan.artela.network/',
+      },
+      verificationAPIKey: 'abc',
     },
   },
   solidity: {
@@ -520,7 +518,18 @@ export default {
     },
   },
   etherscan: {
+    apiKey: {
+      artelaTestnet: 'abc',
+    },
     customChains: [
+      {
+        network: 'artelaTestnet',
+        chainId: 11822,
+        urls: {
+          apiURL: 'https://betanet-scan.artela.network/api',
+          browserURL: 'https://betanet-scan.artela.network/',
+        },
+      },
       {
         network: 'zkemv',
         chainId: 1101,

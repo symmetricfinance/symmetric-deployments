@@ -54,4 +54,7 @@ export default {
   meter: {
     admin: '0x7255Db0d1C1B93Fb756157074fa0613Aa6878F31',
   },
+  artelaTestnet: {
+    admin: '0x91382D68A668D541C9d5Cdb4fCe62d8A1Eb87b56',
+  },
 };
