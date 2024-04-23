@@ -9,4 +9,7 @@ export default {
   telosTestnet: {
     Admin: '0xA57951EBaFBbBf9Fcc4674E25410aC485e100e4e',
   },
+  meter: {
+    Admin: '0x694d28317F8D8c41D3D471687D92695A187D7f81',
+  },
 };

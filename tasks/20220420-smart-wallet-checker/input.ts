@@ -29,4 +29,11 @@ export default {
       '0x42613DDb353730cf2404BcFf2034c9007f968192',
     ],
   },
+  meter: {
+    InitialAllowedAddresses: [
+      '0x51db3Cc6431fe6297270360dE47345B0149E1F51', //gov
+      '0x37F5a2c467f6326E0a81A28ad0f016Fc7c2a1278', //Treasury
+      '0xc512f6E3D970B08b86Ae8326f3E62919e01B6011', //Team
+    ],
+  },
 };

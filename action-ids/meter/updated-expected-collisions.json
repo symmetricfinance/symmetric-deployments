@@ -1,0 +1,70 @@
+{
+  "0x6e198738e22fabf893e4517d38ed184f431c62f44fc88acf9f53e06cfacf2772": [
+    {
+      "taskId": "20220325-gauge-controller",
+      "contractName": "VotingEscrow",
+      "signature": "checkpoint()",
+      "useAdaptor": true
+    },
+    {
+      "taskId": "20220325-gauge-controller",
+      "contractName": "GaugeController",
+      "signature": "checkpoint()",
+      "useAdaptor": true
+    },
+    {
+      "taskId": "20220714-fee-distributor-v2",
+      "contractName": "FeeDistributor",
+      "signature": "checkpoint()",
+      "useAdaptor": true
+    },
+    {
+      "taskId": "20230215-single-recipient-gauge-factory-v2",
+      "contractName": "SingleRecipientGauge",
+      "signature": "checkpoint()",
+      "useAdaptor": true
+    }
+  ],
+  "0x6da3c6c8166f9e8f34c919a3f1c80190c247388e8b0e2bf03dc5a6d9244e9b57": [
+    {
+      "taskId": "20220822-mainnet-gauge-factory-v2",
+      "contractName": "LiquidityGaugeV5",
+      "signature": "killGauge()",
+      "useAdaptor": true
+    },
+    {
+      "taskId": "20230215-single-recipient-gauge-factory-v2",
+      "contractName": "SingleRecipientGauge",
+      "signature": "killGauge()",
+      "useAdaptor": true
+    }
+  ],
+  "0xbb32558623a137d006280a0dec7cd6b7c8501eaad1e0f2e8d357454e8868a4a2": [
+    {
+      "taskId": "20220822-mainnet-gauge-factory-v2",
+      "contractName": "LiquidityGaugeV5",
+      "signature": "setRelativeWeightCap(uint256)",
+      "useAdaptor": true
+    },
+    {
+      "taskId": "20230215-single-recipient-gauge-factory-v2",
+      "contractName": "SingleRecipientGauge",
+      "signature": "setRelativeWeightCap(uint256)",
+      "useAdaptor": true
+    }
+  ],
+  "0x5a5a84b0b2a91f49fd400b1a928c58bab6a11778ef31e82669ac8edebfaa6205": [
+    {
+      "taskId": "20220822-mainnet-gauge-factory-v2",
+      "contractName": "LiquidityGaugeV5",
+      "signature": "unkillGauge()",
+      "useAdaptor": true
+    },
+    {
+      "taskId": "20230215-single-recipient-gauge-factory-v2",
+      "contractName": "SingleRecipientGauge",
+      "signature": "unkillGauge()",
+      "useAdaptor": true
+    }
+  ]
+}

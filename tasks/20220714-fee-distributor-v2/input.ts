@@ -24,4 +24,7 @@ export default {
   telos: {
     startTime: 1701907200, // Thursday, December 7 2023 00:00:00 UTC
   },
+  meter: {
+    startTime: 1713398400, // Thursday, April 18 2024 00:00:00 UTC
+  },
 };
