@@ -1,0 +1,89 @@
+{
+  "20210418-authorizer": {
+    "contracts": [
+      {
+        "name": "Authorizer",
+        "address": "0x16A870499268e25a5e8728F23BeFccB3ab357a4D"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20210418-vault": {
+    "contracts": [
+      {
+        "name": "Vault",
+        "address": "0x3d2fBcA234d5F9BDBa1091fbF18813b5C75DCb41"
+      },
+      {
+        "name": "ProtocolFeesCollector",
+        "address": "0x905035B602477e44b39Dbb19603723c0a9A3c769"
+      },
+      {
+        "name": "BalancerHelpers",
+        "address": "0x4446664638E7cF5222c58907248cA3D8EE40b405"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20220325-test-balancer-token": {
+    "contracts": [
+      {
+        "name": "TestBalancerToken",
+        "address": "0x4a869ed6b3f74dC41537EF27e8eB3A8676AE4614"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20220725-protocol-fee-percentages-provider": {
+    "contracts": [
+      {
+        "name": "ProtocolFeePercentagesProvider",
+        "address": "0x5Dd5eBC751F8c03452e2A103e81B3E5750b6803D"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20230320-weighted-pool-v4": {
+    "contracts": [
+      {
+        "name": "WeightedPoolFactory",
+        "address": "0x8425F0EE50F0A26a8D73a781dB9f91424be23a7A"
+      },
+      {
+        "name": "MockWeightedPool",
+        "address": "0x2571766Df24544FA0403935630b60c81a662d693"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20230711-composable-stable-pool-v5": {
+    "contracts": [
+      {
+        "name": "ComposableStablePoolFactory",
+        "address": "0x67406E25417Db90fe612f48862Be7080f4216FAD"
+      },
+      {
+        "name": "MockComposableStablePool",
+        "address": "0x8285AE0d8C8340339292E4fdD51852471469de0B"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20231031-batch-relayer-v6": {
+    "contracts": [
+      {
+        "name": "BatchRelayerLibrary",
+        "address": "0xf0CaF2B27655b1323886d8836f3b55089F38cC83"
+      },
+      {
+        "name": "BatchRelayerQueryLibrary",
+        "address": "0xA2D88B8B7b2d4893bd9053De4AF70C093EEd1D2a"
+      },
+      {
+        "name": "BalancerRelayer",
+        "address": "0xc1DCc30d4769c727aeBb46a2C6DdfF37d7F3bfb6"
+      }
+    ],
+    "status": "ACTIVE"
+  }
+}
