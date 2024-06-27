@@ -3,7 +3,7 @@
     "contracts": [
       {
         "name": "Authorizer",
-        "address": "0x16A870499268e25a5e8728F23BeFccB3ab357a4D"
+        "address": "0xFaaD333BCb828B60e85059D2DF2302cBbf7c7F27"
       }
     ],
     "status": "ACTIVE"
@@ -12,15 +12,15 @@
     "contracts": [
       {
         "name": "Vault",
-        "address": "0x3d2fBcA234d5F9BDBa1091fbF18813b5C75DCb41"
+        "address": "0x6505f21E7E9DDB4f4A84bd1cA3Cad54B6ADf5cc4"
       },
       {
         "name": "ProtocolFeesCollector",
-        "address": "0x905035B602477e44b39Dbb19603723c0a9A3c769"
+        "address": "0x5136E9B82cA2958F78109f14398236AbDE1518D0"
       },
       {
         "name": "BalancerHelpers",
-        "address": "0x4446664638E7cF5222c58907248cA3D8EE40b405"
+        "address": "0xA581170C91b36015108f613716Fd248B20D201E3"
       }
     ],
     "status": "ACTIVE"
@@ -34,11 +34,20 @@
     ],
     "status": "ACTIVE"
   },
+  "20220721-balancer-queries": {
+    "contracts": [
+      {
+        "name": "BalancerQueries",
+        "address": "0x958109308366A0B1DC8C453C6dE33123e553344D"
+      }
+    ],
+    "status": "ACTIVE"
+  },
   "20220725-protocol-fee-percentages-provider": {
     "contracts": [
       {
         "name": "ProtocolFeePercentagesProvider",
-        "address": "0x5Dd5eBC751F8c03452e2A103e81B3E5750b6803D"
+        "address": "0x12368B4c6Dfc7aC89e3Ad5282bd620F90bb67dF7"
       }
     ],
     "status": "ACTIVE"
@@ -47,11 +56,11 @@
     "contracts": [
       {
         "name": "WeightedPoolFactory",
-        "address": "0x8425F0EE50F0A26a8D73a781dB9f91424be23a7A"
+        "address": "0x7e3dAe5fd8FaED7C3Bef04F987c2eF68A9A350A4"
       },
       {
         "name": "MockWeightedPool",
-        "address": "0x2571766Df24544FA0403935630b60c81a662d693"
+        "address": "0xD807B899BD69Cd3F7c20d4a5C86e8822ED96953E"
       }
     ],
     "status": "ACTIVE"
@@ -60,11 +69,11 @@
     "contracts": [
       {
         "name": "ComposableStablePoolFactory",
-        "address": "0x67406E25417Db90fe612f48862Be7080f4216FAD"
+        "address": "0xC941936cE60223963A6aab6Bdb7dF0edF54c4EAa"
       },
       {
         "name": "MockComposableStablePool",
-        "address": "0x8285AE0d8C8340339292E4fdD51852471469de0B"
+        "address": "0x14a0f92F3381FD9E590E166214A141B32D673c9b"
       }
     ],
     "status": "ACTIVE"
@@ -73,7 +82,7 @@
     "contracts": [
       {
         "name": "BatchRelayerLibrary",
-        "address": "0xf0CaF2B27655b1323886d8836f3b55089F38cC83"
+        "address": "0x73Ad19eb1D7c46c782425340d6f89b3D32E8D197"
       },
       {
         "name": "BatchRelayerQueryLibrary",

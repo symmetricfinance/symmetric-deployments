@@ -421,7 +421,7 @@ export default {
       // ... other hardhat specific configurations
     },
     telos: {
-      url: 'https://mainnet.telos.net/evm',
+      url: 'https://mainnet15.telos.net/evm',
       chainId: 40,
       accounts: [PRIVATE_KEY],
       // ... other configurations specific to this network

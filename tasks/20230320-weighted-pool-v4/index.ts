@@ -91,5 +91,5 @@ export default async (task: Task, { force, from }: TaskRunOptions = {}): Promise
     ]);
     await task.sourcifyVerify('WeightedPool', mockPool.address);
   }
-  // await task.sourcifyVerify('WeightedPool', '0xabbcd1249510a6afb5d1e6d055bf86637e7dad63');
+  // await task.sourcifyVerify('WeightedPool', '0x03B038D9ad0A69339c9AF310aC0F205e2670f9B2');
 };
