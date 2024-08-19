@@ -22,4 +22,7 @@ export default {
   telos: {
     GaugeController,
   },
+  meter: {
+    GaugeController,
+  },
 };

@@ -175,6 +175,15 @@
     ],
     "status": "ACTIVE"
   },
+  "20230519-gauge-adder-v4": {
+    "contracts": [
+      {
+        "name": "GaugeAdder",
+        "address": "0xcb82e43531198F55c892630Bc6Af35C831A76Fad"
+      }
+    ],
+    "status": "ACTIVE"
+  },
   "20230711-composable-stable-pool-v5": {
     "contracts": [
       {
@@ -184,6 +193,15 @@
       {
         "name": "MockComposableStablePool",
         "address": "0x4f2E1EBaa28e1053234d837e032536Dc39EA15D5"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20230915-stakeless-gauge-checkpointer-v2": {
+    "contracts": [
+      {
+        "name": "StakelessGaugeCheckpointer",
+        "address": "0x68a83176D2d8e658A91350B11DcF3fD31aAe7cb3"
       }
     ],
     "status": "ACTIVE"
@@ -213,5 +231,53 @@
       }
     ],
     "status": "ACTIVE"
+  },
+  "20240529-fee-distribution-scheduler": {
+    "contracts": [
+      {
+        "name": "DistributionScheduler",
+        "address": "0x88F7034f492CDe049ADCc24153E607ff69235c2A"
+      },
+      {
+        "name": "FeeDistributionScheduler",
+        "address": "0x686d79DAf3fb6405eb00565a552ACAA5E4A488D7"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20240604-burn-symm": {
+    "contracts": [
+      {
+        "name": "BurnSYMM",
+        "address": "0xaEB23704BeCa8180FCB8Fa1194651b957C1dD5b2"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20240702-create-yield-accelerated-pools": {
+    "contracts": [
+      {
+        "name": "ComposableStablePoolFactory",
+        "address": "0x7aa0DBFaCa97734F4E4Ae5DF0E3f2f957D76018F"
+      },
+      {
+        "name": "MockComposableStablePool",
+        "address": "0x4f2E1EBaa28e1053234d837e032536Dc39EA15D5"
+      }
+    ],
+    "status": "SCRIPT"
+  },
+  "20240726-create-yield-accelerated-pools": {
+    "contracts": [
+      {
+        "name": "ComposableStablePoolFactory",
+        "address": "0x7aa0DBFaCa97734F4E4Ae5DF0E3f2f957D76018F"
+      },
+      {
+        "name": "MockComposableStablePool",
+        "address": "0x4f2E1EBaa28e1053234d837e032536Dc39EA15D5"
+      }
+    ],
+    "status": "SCRIPT"
   }
 }

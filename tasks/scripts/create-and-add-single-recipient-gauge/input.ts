@@ -20,7 +20,7 @@ const pools = [
     recipient: '0xaEB23704BeCa8180FCB8Fa1194651b957C1dD5b2',
     weight: bn(100e16),
     feeDistributorRecipient: true,
-    gauge: '0xF4D1405df236BB5bD654B40Db4C055cb59522939',
+    gauge: '0x306F5A0b2976A1c6a526cbBfD0d33C8232a467c2',
   },
 ];
 

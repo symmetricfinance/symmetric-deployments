@@ -433,7 +433,7 @@ export default {
       // ... other configurations specific to this network
     },
     meter: {
-      url: 'https://rpc.meter.io',
+      url: 'https://meter.blockpi.network/v1/rpc/public',
       chainId: 82,
       accounts: [PRIVATE_KEY],
       // ... other configurations specific to this network
@@ -490,6 +490,36 @@ export default {
       urls: {
         apiURL: 'https://betanet-scan.artela.network/api',
         browserURL: 'https://betanet-scan.artela.network/',
+      },
+      verificationAPIKey: 'abc',
+    },
+    vanaSatori: {
+      url: 'https://rpc.satori.vana.org',
+      chainId: 14801,
+      accounts: [PRIVATE_KEY],
+      urls: {
+        apiURL: 'https://satori.vanascan.io/api',
+        browserURL: 'https://satori.vanascan.io/',
+      },
+      verificationAPIKey: 'abc',
+    },
+    taiko: {
+      url: 'https://rpc.taiko.xyz',
+      chainId: 167000,
+      accounts: [PRIVATE_KEY],
+      urls: {
+        apiURL: 'https://api.taikoscan.io/api',
+        browserURL: 'https://taikoscan.io/',
+      },
+      verificationAPIKey: process.env.TAIKO_API_KEY,
+    },
+    etherlink: {
+      url: 'https://node.mainnet.etherlink.com',
+      chainId: 42793,
+      accounts: [PRIVATE_KEY],
+      urls: {
+        apiURL: 'hhttps://explorer.etherlink.com/api',
+        browserURL: 'https://explorer.etherlink.com/',
       },
       verificationAPIKey: 'abc',
     },

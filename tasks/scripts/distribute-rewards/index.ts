@@ -30,19 +30,29 @@ export default async (task: Task): Promise<void> => {
   for (const reward of input.rewards) {
     for (const r of reward) {
       const DistributionScheduler = new ethers.Contract(input.DistributionScheduler, DistributionSchadulerABI, signer);
-      await (await DistributionScheduler.scheduleDistribution(r.gauge, r.token, r.rate, r.period_finish)).wait();
+      await (await DistributionScheduler.scheduleDistribution(r.gauge, r.token, r.rate, input.timestamp)).wait();
       console.log('Scheduled distribution of', r.rate.toString(), r.tokenSymbol, 'for', r.symbol, 'gauge', r.gauge);
     }
   }
-  for (const reward of input.rewards) {
-    for (const r of reward) {
-      const FeeDistributionScheduler = new ethers.Contract(
-        input.FeeDistributionScheduler,
-        FeeDistributionSchadulerABI,
-        signer
-      );
-      await (await FeeDistributionScheduler.scheduleDistribution(r.gauge, r.token, r.rate, r.period_finish)).wait();
-      console.log('Scheduled distribution of', r.rate.toString(), r.tokenSymbol, 'for', r.symbol, 'gauge', r.gauge);
-    }
+
+  for (const r of input.veRewards) {
+    const FeeDistributionScheduler = new ethers.Contract(
+      input.FeeDistributionScheduler,
+      FeeDistributionSchadulerABI,
+      signer
+    );
+    await (
+      await FeeDistributionScheduler.scheduleDistribution(r.feeDistributor, r.token, r.rate, input.timestamp)
+    ).wait();
+
+    console.log(
+      'Scheduled distribution of',
+      r.rate.toString(),
+      r.tokenSymbol,
+      'for',
+      r.symbol,
+      'feeDistributor',
+      r.feeDistributor
+    );
   }
 };
