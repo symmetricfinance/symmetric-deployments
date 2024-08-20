@@ -17,6 +17,7 @@ This version also adds gauge checkpoint / mint capabilities for gauges (both mai
 - [Avalanche mainnet addresses](./output/avalanche.json)
 - [Polygon zkeVM mainnet addresses](./output/zkevm.json)
 - [Base mainnet addresses](./output/base.json)
-- [Goerli testnet addresses](./output/goerli.json)
+- [Fraxtal mainnet addresses](./output/fraxtal.json)
+- [Mode mainnet addresses](./output/mode.json)
 - [Sepolia testnet addresses](./output/sepolia.json)
 - [`BalancerRelayer` artifact](./artifact/BalancerRelayer.json)

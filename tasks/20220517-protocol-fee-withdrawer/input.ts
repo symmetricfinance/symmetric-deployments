@@ -41,7 +41,10 @@ export default {
   base: {
     InitialDeniedTokens: [],
   },
-  goerli: {
+  fraxtal: {
+    InitialDeniedTokens: [],
+  },
+  mode: {
     InitialDeniedTokens: [],
   },
   sepolia: {

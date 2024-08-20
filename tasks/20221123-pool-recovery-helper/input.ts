@@ -18,12 +18,6 @@ export default {
       WeightedPoolFactoryTask.output({ network: 'mainnet' }).WeightedPoolFactory,
     ],
   },
-  goerli: {
-    InitialFactories: [
-      ComposableStablePoolFactoryTask.output({ network: 'goerli' }).ComposableStablePoolFactory,
-      WeightedPoolFactoryTask.output({ network: 'goerli' }).WeightedPoolFactory,
-    ],
-  },
   polygon: {
     InitialFactories: [
       ComposableStablePoolFactoryTask.output({ network: 'polygon' }).ComposableStablePoolFactory,
@@ -60,10 +54,16 @@ export default {
   zkevm: {
     InitialFactories: [],
   },
-  sepolia: {
+  base: {
     InitialFactories: [],
   },
-  base: {
+  fraxtal: {
+    InitialFactories: [],
+  },
+  mode: {
+    InitialFactories: [],
+  },
+  sepolia: {
     InitialFactories: [],
   },
 };

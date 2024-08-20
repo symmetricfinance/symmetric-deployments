@@ -276,7 +276,7 @@
         "address": "0x2Ba5fd37e71Ab2633602553BE7ad5A377D7ED31A"
       }
     ],
-    "status": "ACTIVE"
+    "status": "DEPRECATED"
   },
   "20230411-managed-pool-v2": {
     "contracts": [
@@ -340,7 +340,7 @@
         "address": "0x6bDa27339629e2d031F19555D3E44c205c31a13a"
       }
     ],
-    "status": "ACTIVE"
+    "status": "DEPRECATED"
   },
   "20230712-child-chain-gauge-checkpointer": {
     "contracts": [
@@ -377,6 +377,19 @@
       {
         "name": "BalancerRelayer",
         "address": "0xf41D6De4bbE9919d87BC1E5cc3335549e2A1A6c0"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20240223-composable-stable-pool-v6": {
+    "contracts": [
+      {
+        "name": "ComposableStablePoolFactory",
+        "address": "0x6B5dA774890Db7B7b96C6f44e6a4b0F657399E2e"
+      },
+      {
+        "name": "MockComposableStablePool",
+        "address": "0x513E5C8678996951FFA07EDB7217A1cF30CF8653"
       }
     ],
     "status": "ACTIVE"

@@ -111,9 +111,25 @@ This data is accessed via the [`local-networks-config`](https://www.npmjs.com/pa
       "url": "https://bsc.rpc.endpoint/myAPIKey",
       "verificationAPIKey": "bsc-etherscan-API-key"
     },
-    "goerli": {
-      "url": "https://goerli.rpc.endpoint/myAPIKey",
-      "verificationAPIKey": "goerli-etherscan-API-key"
+    "avalanche": {
+      "url": "https://avalanche.rpc.endpoint/myAPIKey",
+      "verificationAPIKey": "avalanche-etherscan-API-key"
+    },
+    "zkevm": {
+      "url": "https://zkevm.rpc.endpoint/myAPIKey",
+      "verificationAPIKey": "zkevm-etherscan-API-key"
+    },
+    "base": {
+      "url": "https://base.rpc.endpoint/myAPIKey",
+      "verificationAPIKey": "base-etherscan-API-key"
+    },
+    "fraxtal": {
+      "url": "https://fraxtal.rpc.endpoint/myAPIKey",
+      "verificationAPIKey": "fraxtal-etherscan-API-key"
+    },
+    "mode": {
+      "url": "https://mode.rpc.endpoint/myAPIKey",
+      "verificationAPIKey": "mode-etherscan-API-key"
     }
   },
   "defaultConfig": {

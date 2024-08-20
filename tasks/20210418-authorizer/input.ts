@@ -3,9 +3,6 @@ export type AuthorizerDeployment = {
 };
 
 export default {
-  kovan: {
-    admin: '0xE0a171587b1Cae546E069A943EDa96916F5EE977',
-  },
   mainnet: {
     admin: '0x10A19e7eE7d7F8a52822f6817de8ea18204F2e4f',
   },
@@ -30,17 +27,17 @@ export default {
   zkevm: {
     admin: '0x2f237e7643a3bF6Ef265dd6FCBcd26a7Cc38dbAa',
   },
-  goerli: {
-    admin: '0xE0a171587b1Cae546E069A943EDa96916F5EE977',
-  },
   sepolia: {
     admin: '0x171C0fF5943CE5f133130436A29bF61E26516003',
   },
   base: {
     admin: '0xC40DCFB13651e64C8551007aa57F9260827B6462',
   },
-  fantom: {
-    admin: '0x4fbe899d37fb7514adf2f41B0630E018Ec275a0C',
+  fraxtal: {
+    admin: '0x4f22C2784Cbd2B24a172566491Ee73fee1A63c2e',
+  },
+  mode: {
+    admin: '0x4f22C2784Cbd2B24a172566491Ee73fee1A63c2e',
   },
   telos: {
     admin: '0x7255Db0d1C1B93Fb756157074fa0613Aa6878F31',

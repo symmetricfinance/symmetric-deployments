@@ -8,7 +8,8 @@
 
 ### New Deployments
 
-- Deployed `TimelockAuthorizer` and `TimelockAuthorizerMigrator` to Goerli.
+- Deployed contracts to Fraxtal with veBAL support.
+- Deployed contracts to Mode without veBAL support.
 - Deployed `BatchRelayerLibrary` V5 to all networks.
 - Deployed `L2BalancerPseudoMinter` to all networks except Ethereum.
 - Deployed `VotingEscrowDelegationProxy` and `NullVotingEscrow` to all networks except Ethereum.
@@ -32,30 +33,41 @@
 - Deployed `AvalancheRootGaugeFactory` V2 to Mainnet.
 - Deployed `BalancerPoolDataQueries` to all networks.
 - Deployed `TimelockAuthorizer` to Goerli and Sepolia.
-- Deployed `ComposableStablePoolFactory` V5 to all networks.
 - Deployed `ChildChainGaugeCheckpointer` (Balancer relayer v5.1) to all networks except Ethereum.
 - Deployed `ChainlinkRateProviderFactory` to all networks.
 - Deployed `StakelessGaugeCheckpointer` V2 to Ethereum and Sepolia.
 - Deployed `BaseRootGaugeFactory` to Mainnet.
 - Deployed `BatchRelayerLibrary` V6 to all networks.
+- Deployed `ComposableStablePoolFactory` V6 to all networks.
 
 ### Deprecations
 
+- Deprecated all linear pool types:
+  - `20230206-aave-rebalanced-linear-pool-v4`.
+  - `20230206-erc4626-linear-pool-v3`.
+  - `20230208-euler-linear-pool`
+  - `20230213-gearbox-linear-pool`.
+  - `20230213-yearn-linear-pool`.
+  - `20230315-silo-linear-pool`.
+  - `20230409-erc4626-linear-pool-v4`.
+  - `20230409-gearbox-linear-pool-v2`.
+  - `20230409-yearn-linear-pool-v2`.
+  - `20230410-aave-linear-pool-v5`
+  - `20230410-silo-linear-pool-v2`
+- Deprecated `20220413-child-chain-gauge-factory`.
+- Deprecated `20220527-child-chain-gauge-token-adder`.
+- Deprecated `20220812-child-chain-reward-helper`.
 - Deprecated `20221202-timelock-authorizer`.
 - Deprecated `20220916-batch-relayer-v4`.
 - Deprecated `20230109-gauge-adder-v3`.
-- Deprecated `20230206-aave-rebalanced-linear-pool-v4`.
 - Deprecated `20230206-composable-stable-pool-v3`.
-- Deprecated `20230206-erc4626-linear-pool-v3`.
 - Deprecated `20230206-weighted-pool-v3`.
-- Deprecated `20230213-gearbox-linear-pool`.
-- Deprecated `20230213-yearn-linear-pool`.
-- Deprecated `20230315-silo-linear-pool`.
 - Deprecated `20230320-composable-stable-pool-v4`.
 - Deprecated `20230316-avax-l2-balancer-pseudo-minter` and `20230316-avax-child-chain-gauge-factory-v2` (initial version for `L2BalancerPseudoMinter` and `ChildChainGaugeFactory` for Avalanche).
 - Deprecated `20230527-l2-gauge-checkpointer`.
 - Deprecated `20230529-avalanche-root-gauge-factory`.
 - Deprecated `20230731-stakeless-gauge-checkpointer`.
+- Deprecated `20230711-composable-stable-pool-v5`
 
 ### New Networks
 

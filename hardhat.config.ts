@@ -39,9 +39,7 @@ import {
   withRetries,
 } from './src/network';
 
-const THEGRAPHURLS: { [key: string]: string } = {
-  goerli: 'https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-authorizer-goerli',
-};
+const THEGRAPHURLS: { [key: string]: string } = {};
 
 task('deploy', 'Run deployment task')
   .addParam('id', 'Deployment task ID')
@@ -585,11 +583,19 @@ export default {
         },
       },
       {
-        network: 'fantom',
-        chainId: 250,
+        network: 'fraxtal',
+        chainId: 252,
         urls: {
-          apiURL: 'https://api.ftmscan.com/api',
-          browserURL: 'https://ftmscan.com',
+          apiURL: 'https://api.fraxscan.com/api',
+          browserURL: 'https://fraxscan.com/',
+        },
+      },
+      {
+        network: 'mode',
+        chainId: 34443,
+        urls: {
+          apiURL: 'https://api.routescan.io/v2/network/mainnet/evm/34443/etherscan',
+          browserURL: 'https://modescan.io',
         },
       },
     ],

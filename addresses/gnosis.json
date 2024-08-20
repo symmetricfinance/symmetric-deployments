@@ -67,7 +67,7 @@
         "address": "0x809B79b53F18E9bc08A961ED4678B901aC93213a"
       }
     ],
-    "status": "ACTIVE"
+    "status": "DEPRECATED"
   },
   "20220425-unbutton-aave-linear-pool": {
     "contracts": [
@@ -94,7 +94,7 @@
         "address": "0x1802953277FD955f9a254B80Aa0582f193cF1d77"
       }
     ],
-    "status": "ACTIVE"
+    "status": "DEPRECATED"
   },
   "20220609-stable-pool-v2": {
     "contracts": [
@@ -130,7 +130,7 @@
         "address": "0xf7D5DcE55E6D47852F054697BAB6A1B48A00ddbd"
       }
     ],
-    "status": "ACTIVE"
+    "status": "DEPRECATED"
   },
   "20220908-weighted-pool-v2": {
     "contracts": [
@@ -364,7 +364,7 @@
         "address": "0x1AC55C31DaC78ca943CB8ebfCa5945ce09e036e2"
       }
     ],
-    "status": "ACTIVE"
+    "status": "DEPRECATED"
   },
   "20230411-managed-pool-v2": {
     "contracts": [
@@ -408,6 +408,15 @@
     ],
     "status": "ACTIVE"
   },
+  "20230524-lz-omni-voting-escrow-child": {
+    "contracts": [
+      {
+        "name": "OmniVotingEscrowChild",
+        "address": "0xE241C6e48CA045C7f631600a0f1403b2bFea05ad"
+      }
+    ],
+    "status": "ACTIVE"
+  },
   "20230525-l2-veboost-v2": {
     "contracts": [
       {
@@ -446,7 +455,7 @@
         "address": "0xa359b6BB0a89ED9f237C83f32fF05c658DA8b3aB"
       }
     ],
-    "status": "ACTIVE"
+    "status": "DEPRECATED"
   },
   "20230712-child-chain-gauge-checkpointer": {
     "contracts": [
@@ -483,6 +492,19 @@
       {
         "name": "BalancerRelayer",
         "address": "0x2163c2FcD0940e84B8a68991bF926eDfB0Cd926C"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20240223-composable-stable-pool-v6": {
+    "contracts": [
+      {
+        "name": "ComposableStablePoolFactory",
+        "address": "0x47B489bf5836f83ABD928C316F8e39bC0587B020"
+      },
+      {
+        "name": "MockComposableStablePool",
+        "address": "0x5d98909Aa2b3d964907B3735597F47E06b04D8b4"
       }
     ],
     "status": "ACTIVE"

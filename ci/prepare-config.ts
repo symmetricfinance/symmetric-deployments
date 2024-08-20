@@ -31,9 +31,6 @@ if (process.env.CI) {
       "zkevm": {
         "url": "${process.env.ZKEVM_RPC_ENDPOINT}"
       },
-      "goerli": {
-        "url": "${process.env.GOERLI_RPC_ENDPOINT}"
-      },
       "sepolia": {
         "url": "${process.env.SEPOLIA_RPC_ENDPOINT}"
       },
@@ -43,8 +40,11 @@ if (process.env.CI) {
       "base": {
         "url": "${process.env.BASE_RPC_ENDPOINT}"
       },
-      "fantom": {
-        "url": "${process.env.FANTOM_RPC_ENDPOINT}"
+      "fraxtal": {
+        "url": "${process.env.FRAXTAL_RPC_ENDPOINT}"
+      },
+      "mode": {
+        "url": "${process.env.MODE_RPC_ENDPOINT}"
       }
     },
     "defaultConfig": {

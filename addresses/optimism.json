@@ -102,7 +102,7 @@
         "address": "0x2E96068b3D5B5BAE3D7515da4A1D2E52d08A2647"
       }
     ],
-    "status": "ACTIVE"
+    "status": "DEPRECATED"
   },
   "20220425-unbutton-aave-linear-pool": {
     "contracts": [
@@ -138,7 +138,7 @@
         "address": "0x6f5a2eE11E7a772AeB5114A20d0D7c0ff61EB8A0"
       }
     ],
-    "status": "ACTIVE"
+    "status": "DEPRECATED"
   },
   "20220609-stable-pool-v2": {
     "contracts": [
@@ -196,7 +196,7 @@
         "address": "0x8aB784368A1883DA90D8513b48801e2Db1cb2D5D"
       }
     ],
-    "status": "ACTIVE"
+    "status": "DEPRECATED"
   },
   "20220817-aave-rebalanced-linear-pool": {
     "contracts": [
@@ -495,7 +495,7 @@
         "address": "0x2DA61Ef3Cdcb97efb0f7099c02527fabFe94Dee5"
       }
     ],
-    "status": "ACTIVE"
+    "status": "DEPRECATED"
   },
   "20230409-yearn-linear-pool-v2": {
     "contracts": [
@@ -512,7 +512,7 @@
         "address": "0x34557eF500Bfc060B8e3f2DA58EF725Bb7D32202"
       }
     ],
-    "status": "ACTIVE"
+    "status": "DEPRECATED"
   },
   "20230410-aave-linear-pool-v5": {
     "contracts": [
@@ -533,7 +533,7 @@
         "address": "0x45d37982784F022A9864748b4E8750e1e7019604"
       }
     ],
-    "status": "ACTIVE"
+    "status": "DEPRECATED"
   },
   "20230411-managed-pool-v2": {
     "contracts": [
@@ -577,6 +577,15 @@
     ],
     "status": "ACTIVE"
   },
+  "20230524-lz-omni-voting-escrow-child": {
+    "contracts": [
+      {
+        "name": "OmniVotingEscrowChild",
+        "address": "0xE241C6e48CA045C7f631600a0f1403b2bFea05ad"
+      }
+    ],
+    "status": "ACTIVE"
+  },
   "20230525-l2-veboost-v2": {
     "contracts": [
       {
@@ -615,7 +624,7 @@
         "address": "0x77A0Df59d1d73B12B07Bcded0611279D8801ee96"
       }
     ],
-    "status": "ACTIVE"
+    "status": "DEPRECATED"
   },
   "20230712-child-chain-gauge-checkpointer": {
     "contracts": [
@@ -652,6 +661,19 @@
       {
         "name": "BalancerRelayer",
         "address": "0x015ACA20a1422F3c729086c17f15F10e0CfbC75A"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20240223-composable-stable-pool-v6": {
+    "contracts": [
+      {
+        "name": "ComposableStablePoolFactory",
+        "address": "0x4bdCc2fb18AEb9e2d281b0278D946445070EAda7"
+      },
+      {
+        "name": "MockComposableStablePool",
+        "address": "0x287E4A89d03deCdF7ac372c7B5332AbCDb3D912A"
       }
     ],
     "status": "ACTIVE"

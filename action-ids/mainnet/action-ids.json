@@ -1473,5 +1473,50 @@
         "removeGauges(string,address[])": "0x925200f5f95b4131609c62d42944f8e9b0bfef74d062ef3b3e469eb09b4baebe"
       }
     }
+  },
+  "20240223-composable-stable-pool-v6": {
+    "ComposableStablePool": {
+      "useAdaptor": false,
+      "factoryOutput": "0xF1C849190Ecfae64d0Bd0a0708708E1De906aaB5",
+      "actionIds": {
+        "disableRecoveryMode()": "0x4a19dd39fa8f4bbd7452fd4cf82679df5cf73700c2b6b88c1243653f0e85260e",
+        "enableRecoveryMode()": "0xaaa009efc2738b643cc29ff4930552287a5151779614a313f479d6a4f55b4d84",
+        "pause()": "0x7106e3d8f9c8398d705d56aa3dd355670b20ec766484954c9e74d61fd3aec3ad",
+        "setAssetManagerPoolConfig(address,bytes)": "0xad9f553f39f9b65b5c46b089708526bbdb5ddce170d9eb15782fab57154e1a63",
+        "setSwapFeePercentage(uint256)": "0x74bbca0eb5858285c56e762a11a2fff0427631476a3ba0c35195132e15f1fc6c",
+        "setTokenRateCacheDuration(address,uint256)": "0xa2ace9c9c24652c3065370c048dc03c2b08bec191719e0fdcd75d9811f79716f",
+        "startAmplificationParameterUpdate(uint256,uint256)": "0xcd61e70763e513c8c738ee449caf88b90566b2b193bb69d88856f6eb9d0d1f45",
+        "stopAmplificationParameterUpdate()": "0xdf9e7dec263e17ae8ec6c062f6f6076b90a1bccc2b50462ee12b4d98d23846c0",
+        "unpause()": "0x3ec662e68ccb5693e1d5d47f619d5d45a3a23b1c44902687ffb25cfff5071030",
+        "updateProtocolFeePercentageCache()": "0x86387b86ade0e7e0aea4cf17d7c12e752ab979a83965fa413ea704fa56fd35fc",
+        "updateTokenRateCache(address)": "0x1085cd36db4ad1f9e483f2ef106d9673946359c971a61b966e531d7a219021b3"
+      }
+    },
+    "ComposableStablePoolFactory": {
+      "useAdaptor": false,
+      "actionIds": {
+        "create(string,string,address[],uint256,address[],uint256[],bool,uint256,address,bytes32)": "0x21cacfa723f6e67c456105967f45ab2763a47e834d4ac80af7a7d8ac65c6d077",
+        "disable()": "0xf611f8b232e4be511caea74a4b9a6dea519d09225c9cf5d0e4a4bef44e006f71"
+      }
+    }
+  },
+  "20240522-fraxtal-root-gauge-factory": {
+    "OptimisticRootGaugeFactory": {
+      "useAdaptor": false,
+      "actionIds": {
+        "create(address,uint256)": "0x99f3dcf8c4dffdc47610d89353111223e01a26cfeccb0546070160ee9fe9113d",
+        "setOptimismGasLimit(uint32)": "0x4bbd85ce5bc58f2d2870a53de3a232d7a8cbabfed59b8d57aecd51c16079099f"
+      }
+    },
+    "OptimisticRootGauge": {
+      "useAdaptor": true,
+      "actionIds": {
+        "checkpoint()": "0x3f63974a377ba4713661ede455bceda6686a0395f8b8ed8701ad1f13bb926c4d",
+        "initialize(address,uint256,string)": "0x44cf0c8e5d981076577be35e5abcf9066fe410a208ba7734b280176b488bf3b0",
+        "killGauge()": "0xec1d467d9ab03a0079c22a89037209f5763aec973897ea763e2cf25d71a5f12e",
+        "setRelativeWeightCap(uint256)": "0xae60dce27f51ce5815357b9f6b40f200557867f8222262a1646c005d09b7dfba",
+        "unkillGauge()": "0x076e9815202aa39577192023cfa569d6504b003183b2bc13cd0046523dfa23ea"
+      }
+    }
   }
 }

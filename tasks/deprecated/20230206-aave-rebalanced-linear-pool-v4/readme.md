@@ -1,7 +1,7 @@
 # 2023-02-06 - Aave Rebalanced Linear Pool v4
 
 > ⚠️ **DEPRECATED: do not use** ⚠️
-> This deployment has been deprecated in favor of a new version that uses create2 for pool deployments: [aave-linear-pool-v5](../../20230410-aave-linear-pool-v5/).
+> This deployment has been deprecated in favor of a new version that uses create2 for pool deployments: [aave-linear-pool-v5](../20230410-aave-linear-pool-v5/).
 
 Deployment of the `AaveLinearPoolFactory`, for Linear Pools with a wrapped aToken.
 
@@ -15,5 +15,4 @@ Supersedes `20221207-aave-rebalanced-linear-pool-v3`, fixing the reentrancy issu
 - [Optimism mainnet addresses](./output/optimism.json)
 - [BSC mainnet addresses](./output/bsc.json)
 - [Gnosis mainnet addresses](./output/gnosis.json)
-- [Goerli testnet addresses](./output/goerli.json)
 - [`AaveLinearPoolFactory` artifact](./artifact/AaveLinearPoolFactory.json)
