@@ -12,4 +12,7 @@ export default {
   meter: {
     Admin: '0x694d28317F8D8c41D3D471687D92695A187D7f81',
   },
+  vanaSatori: {
+    Admin: '0x7255Db0d1C1B93Fb756157074fa0613Aa6878F31',
+  },
 };

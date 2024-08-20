@@ -498,7 +498,7 @@ export default {
       chainId: 14801,
       accounts: [PRIVATE_KEY],
       urls: {
-        apiURL: 'https://satori.vanascan.io/api',
+        apiURL: 'https://api.satori.vanascan.io/api/v2',
         browserURL: 'https://satori.vanascan.io/',
       },
       verificationAPIKey: 'abc',
@@ -558,6 +558,14 @@ export default {
         urls: {
           apiURL: 'https://betanet-scan.artela.network/api',
           browserURL: 'https://betanet-scan.artela.network/',
+        },
+      },
+      {
+        network: 'vanaSatori',
+        chainId: 14801,
+        urls: {
+          apiURL: 'https://satori.vanascan.io/api',
+          browserURL: 'https://satori.vanascan.io/',
         },
       },
       {

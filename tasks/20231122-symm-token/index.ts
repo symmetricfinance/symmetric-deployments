@@ -5,7 +5,7 @@ import { SymmTokenDeployment } from './input';
 export default async (task: Task, { force, from }: TaskRunOptions = {}): Promise<void> => {
   const input = task.input() as SymmTokenDeployment;
 
-  const args = ['Symmetric on Meter', 'mSYMM'];
+  const args = ['Symmetric on Vana', 'vSYMM'];
   const symmToken = await task.deployAndVerify('SymmToken', args, from, force);
 
   await symmToken.grantRole('0x0000000000000000000000000000000000000000000000000000000000000000', input.Admin);

@@ -27,6 +27,9 @@ export const NETWORKS = [
   'gnosisChiado',
   'kavaTestnet',
   'artelaTestnet',
+  'vanaSatori',
+  'taiko',
+  'etherlink',
 ];
 
 export type Network = (typeof NETWORKS)[number];
