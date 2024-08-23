@@ -10,7 +10,6 @@ export default async (task: Task): Promise<void> => {
   const nftABI = ['function safeMint(address to)'];
 
   for (const wallet of input.wallets) {
-    // console.log('Minting NFT for', wallet);
     const nftContract = new ethers.Contract(input.nftContract, nftABI, signer);
     await (await nftContract.safeMint(wallet)).wait();
     console.log('Minted NFT for', wallet);
