@@ -41,6 +41,23 @@ import {
 
 const THEGRAPHURLS: { [key: string]: string } = {};
 
+task('deploy-core', 'Run deployment task')
+  .addFlag('force', 'Ignore previous deployments')
+  .addOptionalParam('key', 'Etherscan API key to verify contracts')
+  .setAction(async (args: { force?: boolean; key?: string; verbose?: boolean }, hre: HardhatRuntimeEnvironment) => {
+    Logger.setDefaults(false, args.verbose || false);
+
+    const token = '20231122-symm-token';
+    const authorizer = '20210418-authorizer';
+    const vault = '20210418-vault';
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const apiKey = args.key ?? (hre.config.networks[hre.network.name] as any).verificationAPIKey;
+    const verifier = apiKey ? new Verifier(hre.network, apiKey) : undefined;
+    const sourcifyVerifier = new SourcifyVerifier(hre.network);
+    await new Task(args.id, TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(args);
+  });
+
 task('deploy', 'Run deployment task')
   .addParam('id', 'Deployment task ID')
   .addFlag('force', 'Ignore previous deployments')

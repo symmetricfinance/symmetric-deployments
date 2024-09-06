@@ -1,14 +1,14 @@
-import { utils } from 'ethers';
 import { Task, TaskRunOptions } from '@src';
 import { SymmTokenDeployment } from './input';
 
 export default async (task: Task, { force, from }: TaskRunOptions = {}): Promise<void> => {
   const input = task.input() as SymmTokenDeployment;
 
-  const args = ['Symmetric on Vana', 'vSYMM'];
+  const args = [input.name, input.symbol];
   const symmToken = await task.deployAndVerify('SymmToken', args, from, force);
 
   await symmToken.grantRole('0x0000000000000000000000000000000000000000000000000000000000000000', input.Admin);
+
   // await symmToken.grantRole(utils.keccak256(utils.toUtf8Bytes('MINTER_ROLE')), input.Admin);
   // await symmToken.grantRole(utils.keccak256(utils.toUtf8Bytes('SNAPSHOT_ROLE')), input.Admin);
 
