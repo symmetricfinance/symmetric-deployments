@@ -23,34 +23,43 @@ export default async (task: Task): Promise<void> => {
 
   const swaps = [];
   const limits = Array(2).fill(MAX_UINT256);
-  for (let i = 0; i < 4; i++) {
-    for (let i = 0; i < 10; i++) {
-      swaps.push({
-        poolId: input.poolId,
-        amount: '11000000',
-        assetInIndex: 0,
-        assetOutIndex: 1,
-        userData: '0x',
-      });
-    }
-    await (
-      await vaultContract.batchSwap(0, swaps, [input.token1, input.token2], funds, limits, MAX_UINT256, { value: 0 })
-    ).wait();
-    console.log('Swapped', swaps.length, 'times');
-
-    const swaps2 = [];
-    for (let i = 0; i < 10; i++) {
-      swaps2.push({
-        poolId: input.poolId,
-        amount: '11000000',
-        assetInIndex: 1,
-        assetOutIndex: 0,
-        userData: '0x',
-      });
-    }
-    await (
-      await vaultContract.batchSwap(0, swaps2, [input.token1, input.token2], funds, limits, MAX_UINT256, { value: 0 })
-    ).wait();
-    console.log('Swapped the opposite way', swaps.length, 'times');
+  // for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 10; i++) {
+    swaps.push({
+      poolId: input.poolId,
+      amount: '90000000000000000000',
+      assetInIndex: 0,
+      assetOutIndex: 1,
+      userData: '0x',
+    });
   }
+  for (let i = 0; i < 10; i++) {
+    swaps.push({
+      poolId: input.poolId,
+      amount: '245000000000000000000',
+      assetInIndex: 1,
+      assetOutIndex: 0,
+      userData: '0x',
+    });
+  }
+  await (
+    await vaultContract.batchSwap(0, swaps, [input.token1, input.token2], funds, limits, MAX_UINT256, { value: 0 })
+  ).wait();
+  console.log('Swapped', swaps.length, 'times');
+
+  // const swaps2 = [];
+  // for (let i = 0; i < 10; i++) {
+  //   swaps2.push({
+  //     poolId: input.poolId,
+  //     amount: '220000000000000000000',
+  //     assetInIndex: 1,
+  //     assetOutIndex: 0,
+  //     userData: '0x',
+  //   });
+  // }
+  // await (
+  //   await vaultContract.batchSwap(0, swaps2, [input.token1, input.token2], funds, limits, MAX_UINT256, { value: 0 })
+  // ).wait();
+  // console.log('Swapped the opposite way', swaps.length, 'times');
+  //}
 };

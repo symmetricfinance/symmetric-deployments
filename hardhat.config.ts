@@ -47,15 +47,25 @@ task('deploy-core', 'Run deployment task')
   .setAction(async (args: { force?: boolean; key?: string; verbose?: boolean }, hre: HardhatRuntimeEnvironment) => {
     Logger.setDefaults(false, args.verbose || false);
 
-    const token = '20231122-symm-token';
     const authorizer = '20210418-authorizer';
     const vault = '20210418-vault';
+    const protocolFeePercentagesProvider = '20220725-protocol-fee-percentages-provider';
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const apiKey = args.key ?? (hre.config.networks[hre.network.name] as any).verificationAPIKey;
     const verifier = apiKey ? new Verifier(hre.network, apiKey) : undefined;
     const sourcifyVerifier = new SourcifyVerifier(hre.network);
-    await new Task(args.id, TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(args);
+
+    //Deploy Authorizer
+    await new Task(authorizer, TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(args);
+
+    //Deploy Vault
+    await new Task(vault, TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(args);
+
+    //Deploy ProtocolFeePercentagesProvider
+    await new Task(protocolFeePercentagesProvider, TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(
+      args
+    );
   });
 
 task('deploy', 'Run deployment task')
