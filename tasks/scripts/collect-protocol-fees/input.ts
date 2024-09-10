@@ -12,7 +12,7 @@ const ProtocolFeesCollector = new Task('20210418-vault', TaskMode.READ_ONLY);
 
 const TeamMultisig = '0xd82fEb2A7Cd2276B569472a4EeE501c02e07b27b';
 
-const TreasuryMultisig = '0xBd8911e8477a7279f085F473f46A6b9AB54385E7';
+const TreasuryMultisig = '0x598cb1316Ca33Adb7C75EC889778EF13D9A3B807';
 
 const signer = '0x7255Db0d1C1B93Fb756157074fa0613Aa6878F31';
 

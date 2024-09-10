@@ -1,4 +1,4 @@
-export type updateProtocolFeePercentageCache = {
+export type UpdateProtocolFeePercentageCache = {
   signer: string;
   pools: string[];
 };
