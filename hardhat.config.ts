@@ -42,31 +42,54 @@ import {
 const THEGRAPHURLS: { [key: string]: string } = {};
 
 task('deploy-core', 'Run deployment task')
+  .addFlag('sourcify', 'Verify contract on Sourcify')
   .addFlag('force', 'Ignore previous deployments')
   .addOptionalParam('key', 'Etherscan API key to verify contracts')
-  .setAction(async (args: { force?: boolean; key?: string; verbose?: boolean }, hre: HardhatRuntimeEnvironment) => {
-    Logger.setDefaults(false, args.verbose || false);
+  .setAction(
+    async (
+      args: { force?: boolean; key?: string; verbose?: boolean; sourcify?: boolean },
+      hre: HardhatRuntimeEnvironment
+    ) => {
+      Logger.setDefaults(false, args.verbose || false);
 
-    const authorizer = '20210418-authorizer';
-    const vault = '20210418-vault';
-    const protocolFeePercentagesProvider = '20220725-protocol-fee-percentages-provider';
+      const authorizer = '20210418-authorizer';
+      const vault = '20210418-vault';
+      const protocolFeePercentagesProvider = '20220725-protocol-fee-percentages-provider';
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const apiKey = args.key ?? (hre.config.networks[hre.network.name] as any).verificationAPIKey;
-    const verifier = apiKey ? new Verifier(hre.network, apiKey) : undefined;
-    const sourcifyVerifier = new SourcifyVerifier(hre.network);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const apiKey = args.key ?? (hre.config.networks[hre.network.name] as any).verificationAPIKey;
+      const verifier = apiKey ? new Verifier(hre.network, apiKey) : undefined;
+      const sourcifyVerifier = args.sourcify ? new SourcifyVerifier(hre.network) : undefined;
 
-    //Deploy Authorizer
-    await new Task(authorizer, TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(args);
+      //Deploy Authorizer
+      await new Task(authorizer, TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(args);
 
-    //Deploy Vault
-    await new Task(vault, TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(args);
+      //Deploy Vault
+      await new Task(vault, TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(args);
 
-    //Deploy ProtocolFeePercentagesProvider
-    await new Task(protocolFeePercentagesProvider, TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(
-      args
-    );
-  });
+      //Deploy ProtocolFeePercentagesProvider
+      await new Task(protocolFeePercentagesProvider, TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(
+        args
+      );
+
+      //Deploy WeightedPoolFactory
+      await new Task('20230320-weighted-pool-v4', TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(
+        args
+      );
+
+      //Deploy ComposableStablePoolFactory
+      await new Task(
+        '20240223-composable-stable-pool-v6',
+        TaskMode.LIVE,
+        hre.network.name,
+        verifier
+        //sourcifyVerifier
+      ).run(args);
+
+      //Deploy BatchRelayer
+      await new Task('20231031-batch-relayer-v6', TaskMode.LIVE, hre.network.name, verifier).run(args);
+    }
+  );
 
 task('deploy', 'Run deployment task')
   .addParam('id', 'Deployment task ID')
@@ -577,6 +600,30 @@ export default {
       artelaTestnet: 'abc',
     },
     customChains: [
+      {
+        network: 'celo',
+        chainId: 42220,
+        urls: {
+          apiURL: 'https://api.celoscan.io/api',
+          browserURL: 'https://celoscan.io/',
+        },
+      },
+      {
+        network: 'etherlink',
+        chainId: 42793,
+        urls: {
+          apiURL: 'https://explorer.etherlink.com/api',
+          browserURL: 'https://explorer.etherlink.com/',
+        },
+      },
+      {
+        network: 'taiko',
+        chainId: 167000,
+        urls: {
+          apiURL: 'https://api.taikoscan.io/api',
+          browserURL: 'https://taikoscan.io/',
+        },
+      },
       {
         network: 'artelaTestnet',
         chainId: 11822,

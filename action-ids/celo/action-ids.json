@@ -27,5 +27,14 @@
         "withdrawCollectedFees(address[],uint256[],address)": "0x0262ea4bd7d3b7db6cf474e2ecc9b62c1d036586dcf38769d51b2c243ca0d85a"
       }
     }
+  },
+  "20220725-protocol-fee-percentages-provider": {
+    "ProtocolFeePercentagesProvider": {
+      "useAdaptor": false,
+      "actionIds": {
+        "registerFeeType(uint256,string,uint256,uint256)": "0xd376ce380501fbe877108094959f14222faf513f82ad7b009b9b0eb673b1567a",
+        "setFeeTypePercentage(uint256,uint256)": "0x62fb8e2a10cd19afeb43da1aad350bde8f1fd9e6fea834b8166d7babdc55d3a9"
+      }
+    }
   }
 }

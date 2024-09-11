@@ -94,4 +94,19 @@ export default {
     BalancerMinter: ZERO_ADDRESS,
     CanCallUserCheckpoint: false,
   },
+  celo: {
+    wstETH: ZERO_ADDRESS,
+    BalancerMinter: ZERO_ADDRESS,
+    CanCallUserCheckpoint: false,
+  },
+  etherlink: {
+    wstETH: ZERO_ADDRESS,
+    BalancerMinter: ZERO_ADDRESS,
+    CanCallUserCheckpoint: false,
+  },
+  taiko: {
+    wstETH: ZERO_ADDRESS,
+    BalancerMinter: ZERO_ADDRESS,
+    CanCallUserCheckpoint: false,
+  },
 };

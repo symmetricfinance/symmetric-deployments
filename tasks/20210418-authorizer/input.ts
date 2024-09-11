@@ -57,4 +57,13 @@ export default {
   vanaSatori: {
     admin: '0x7255Db0d1C1B93Fb756157074fa0613Aa6878F31',
   },
+  celo: {
+    admin: '0x7255Db0d1C1B93Fb756157074fa0613Aa6878F31',
+  },
+  etherlink: {
+    admin: '0x7255Db0d1C1B93Fb756157074fa0613Aa6878F31',
+  },
+  taiko: {
+    admin: '0x7255Db0d1C1B93Fb756157074fa0613Aa6878F31',
+  },
 };
