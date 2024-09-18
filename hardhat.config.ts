@@ -82,12 +82,19 @@ task('deploy-core', 'Run deployment task')
         '20240223-composable-stable-pool-v6',
         TaskMode.LIVE,
         hre.network.name,
-        verifier
-        //sourcifyVerifier
+        verifier,
+        sourcifyVerifier
       ).run(args);
 
       //Deploy BatchRelayer
-      await new Task('20231031-batch-relayer-v6', TaskMode.LIVE, hre.network.name, verifier).run(args);
+      await new Task('20231031-batch-relayer-v6', TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(
+        args
+      );
+
+      //Deploy BalancerQueries
+      await new Task('20220721-balancer-queries', TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(
+        args
+      );
     }
   );
 
@@ -493,7 +500,7 @@ export default {
       // ... other configurations specific to this network
     },
     celo: {
-      url: 'https://1rpc.io/celo',
+      url: 'https://rpc.ankr.com/celo',
       chainId: 42220,
       accounts: [PRIVATE_KEY],
       urls: {

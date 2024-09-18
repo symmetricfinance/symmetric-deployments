@@ -12,15 +12,15 @@
     "contracts": [
       {
         "name": "Vault",
-        "address": "0xd25e02047e76b688445ab154785f2642c6fe3f73"
+        "address": "0xc2eb5c675A49F87843c814FE76576d20e10C3CD0"
       },
       {
         "name": "ProtocolFeesCollector",
-        "address": "0xc2c2e25d9C232426dB20c958f3c94F04D986C789"
+        "address": "0xEe1001556cd8089CB37Ca98D55059871AaB1411d"
       },
       {
         "name": "BalancerHelpers",
-        "address": "0xdce2ea355530c098f5b9410b6b2663e0fff246bf"
+        "address": "0x332e0bf729f06C9e08ffA42ABb1312Fcd16289e7"
       }
     ],
     "status": "ACTIVE"
@@ -29,7 +29,7 @@
     "contracts": [
       {
         "name": "ProtocolFeePercentagesProvider",
-        "address": "0xbccc4b4c6530F82FE309c5E845E50b5E9C89f2AD"
+        "address": "0x266b53bb135f2dbc324b5C5Aa281e84f1C105B26"
       }
     ],
     "status": "ACTIVE"
@@ -38,11 +38,11 @@
     "contracts": [
       {
         "name": "WeightedPoolFactory",
-        "address": "0xc2a0d530e57B1275fbce908031DA636f95EA1E38"
+        "address": "0x9c9D0025F27756217BDBb584cFB9Dd4aA58B1FEc"
       },
       {
         "name": "MockWeightedPool",
-        "address": "0x169d1c3bf2DDbCe796d152440B1eE4a6035dE7c9"
+        "address": "0xcC1AC629a9F26AD936cdb85860b314b43D75bEEe"
       }
     ],
     "status": "ACTIVE"
@@ -51,15 +51,15 @@
     "contracts": [
       {
         "name": "BatchRelayerLibrary",
-        "address": "0xFEF39453770fF2C6b2F453D1b6D075623a79e3Eb"
+        "address": "0x2320243925EBb4616F4a95319f83cdbEA63bF1a1"
       },
       {
         "name": "BatchRelayerQueryLibrary",
-        "address": "0xc140A35934e3D92d000AFab82E8a084DBEC8dc54"
+        "address": "0xD21E0193d86D05DeB4428f1ec208bd116118a018"
       },
       {
         "name": "BalancerRelayer",
-        "address": "0x8b2e434589419e77b9Fe67F38A0af0efe8DE9c91"
+        "address": "0x5eF0C55D578a441A67D489f29C0323b866324014"
       }
     ],
     "status": "ACTIVE"
@@ -68,11 +68,11 @@
     "contracts": [
       {
         "name": "ComposableStablePoolFactory",
-        "address": "0x4e4131dC27ed9501ac5fEb76F94572fDAe9f0fD0"
+        "address": "0xfff23CDf2e98b6ea6f0ae856e8DeF6Fdb3141dF1"
       },
       {
         "name": "MockComposableStablePool",
-        "address": "0x29AD20f30772eFa51e59F1d16847e45329A422b5"
+        "address": "0xD9EEcCECC783fE2af90A15350CDDb44ff7f60014"
       }
     ],
     "status": "ACTIVE"
