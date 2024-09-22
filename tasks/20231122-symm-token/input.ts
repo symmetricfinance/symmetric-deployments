@@ -25,6 +25,11 @@ export default {
     symbol: 'vSYMM',
     Admin: '0x7255Db0d1C1B93Fb756157074fa0613Aa6878F31',
   },
+  vanaMoksha: {
+    name: 'Symmetric on Vana Mokasha',
+    symbol: 'vSYMM',
+    Admin: '0x7255Db0d1C1B93Fb756157074fa0613Aa6878F31',
+  },
   celo: {
     name: 'Symmetric on Celo',
     symbol: 'cSYMM',

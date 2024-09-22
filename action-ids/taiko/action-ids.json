@@ -1,0 +1,40 @@
+{
+  "20210418-vault": {
+    "Vault": {
+      "useAdaptor": false,
+      "actionIds": {
+        "batchSwap(uint8,(bytes32,uint256,uint256,uint256,bytes)[],address[],(address,bool,address,bool),int256[],uint256)": "0x369a70477fd3970f0c161ddef4772b1ccc86d268df00e3a54e95d023f1f55bd8",
+        "deregisterTokens(bytes32,address[])": "0x709fd13ec1e10c5bd74aa90d4a860a4f4025e8b062a0437feb9436ab41552aaa",
+        "exitPool(bytes32,address,address,(address[],uint256[],bytes,bool))": "0x65d1d3acb8032fcb7c18bb00469faf4915d48254df7af432742cabe39f82e9ad",
+        "flashLoan(address,address[],uint256[],bytes)": "0x8638f784789bf93ec03a3b52a91a9cd540a933c41c7b5b8656bc797787223ef1",
+        "joinPool(bytes32,address,address,(address[],uint256[],bytes,bool))": "0xec8a2f8d5658fa156ce181013b2809738ecc459ea9d8700b283844b8f862ac8a",
+        "managePoolBalance((uint8,bytes32,address,uint256)[])": "0x0cfbbc54d7f0301279e21f74d018dea9c10b846aa2301250eab872cd3d481865",
+        "manageUserBalance((uint8,address,uint256,address,address)[])": "0x03b3ecc5ec0205055ff08dcd4e7eea6957ebc2d5d4fbb4d14dbc81cab675996a",
+        "queryBatchSwap(uint8,(bytes32,uint256,uint256,uint256,bytes)[],address[],(address,bool,address,bool))": "0xc344684888fa4e01fe06533b89704e778e84ad57ee2807a794d6764f772e10b6",
+        "registerPool(uint8)": "0x766b565de630d59d06c390c144bfa355ad0889f13df60e234a111bbad3c264c0",
+        "registerTokens(bytes32,address[],address[])": "0xecfe9a2af20ca65fbd5d636f2b4da5c25d7bcd925980cc190249ea7a1314d75e",
+        "setAuthorizer(address)": "0xeae02ba44519846d47f6def4639e63bfc0f91b59f2c5a7849bac17497414e454",
+        "setPaused(bool)": "0x2f6f0e8bdd297a71eb5951091ab713b1b3957dc60628698992fa263ca8f8be2f",
+        "setRelayerApproval(address,address,bool)": "0xbe4c70d57d03fd65ec92f98f5c6985c4fc721bec9d036dba29d1561df2dd759c",
+        "swap((bytes32,uint8,address,address,uint256,bytes),(address,bool,address,bool),uint256,uint256)": "0x5d1313cb75af26f4c9ae280f869d8d93247173d8ee18d36729cd98d832008af1"
+      }
+    },
+    "ProtocolFeesCollector": {
+      "useAdaptor": false,
+      "actionIds": {
+        "setFlashLoanFeePercentage(uint256)": "0x0b9c8edd17c5d74193f27ab0e75f6fd09073e252f9e01eba062c82bcb7bdee4e",
+        "setSwapFeePercentage(uint256)": "0x14ad22f6cb26688c73539d05ea9bb581a23e87311a24f6f2dbee1764470baf51",
+        "withdrawCollectedFees(address[],uint256[],address)": "0x3238890055345e16968d7aab882283183f2605bae89943808c778b2612b9d4bf"
+      }
+    }
+  },
+  "20220725-protocol-fee-percentages-provider": {
+    "ProtocolFeePercentagesProvider": {
+      "useAdaptor": false,
+      "actionIds": {
+        "registerFeeType(uint256,string,uint256,uint256)": "0xea23ecf120d2a1f17dc8afc728c9a7ac5a9a9d5f33dbd8e4bfe92166e29cf962",
+        "setFeeTypePercentage(uint256,uint256)": "0x7125d4ca80a3b69e9d43655e5bda9101dab688fa9c7232c5a131d4fd390e020b"
+      }
+    }
+  }
+}

@@ -553,8 +553,19 @@ export default {
       chainId: 14801,
       accounts: [PRIVATE_KEY],
       urls: {
-        apiURL: 'https://api.satori.vanascan.io/api/v2',
+        apiURL: 'https://api.satori.vanascan.io/api',
         browserURL: 'https://satori.vanascan.io/',
+      },
+      verificationAPIKey: 'abc',
+    },
+    vanaMoksha: {
+      url: 'https://rpc.moksha.vana.org',
+      chainId: 14800,
+      accounts: [PRIVATE_KEY],
+      gasPrice: 1000000007,
+      urls: {
+        apiURL: 'https://api.vanascan.io/api/',
+        browserURL: 'https://vanascan.io/',
       },
       verificationAPIKey: 'abc',
     },
@@ -645,6 +656,14 @@ export default {
         urls: {
           apiURL: 'https://satori.vanascan.io/api',
           browserURL: 'https://satori.vanascan.io/',
+        },
+      },
+      {
+        network: 'vanaMoksha',
+        chainId: 14800,
+        urls: {
+          apiURL: 'https://api.vanascan.io/api/',
+          browserURL: 'https://vanascan.io/',
         },
       },
       {

@@ -109,4 +109,9 @@ export default {
     BalancerMinter: ZERO_ADDRESS,
     CanCallUserCheckpoint: false,
   },
+  vanaMoksha: {
+    wstETH: ZERO_ADDRESS,
+    BalancerMinter: ZERO_ADDRESS,
+    CanCallUserCheckpoint: false,
+  },
 };

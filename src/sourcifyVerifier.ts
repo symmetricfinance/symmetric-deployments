@@ -141,7 +141,7 @@ export default class SourcifyVerifier {
     } catch (error: unknown) {
       throw Error(`Failed to send verification request. Reason: ${(error as Error).message}`);
     }
-    console.log(response);
+
     if (response.status !== 200) {
       const responseText = await response.text();
       throw Error(`Failed to send verification request.\nHTTP code: ${response.status}.\nResponse: ${responseText}`);
