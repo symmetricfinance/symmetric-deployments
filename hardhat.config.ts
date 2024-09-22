@@ -41,6 +41,63 @@ import {
 
 const THEGRAPHURLS: { [key: string]: string } = {};
 
+task('deploy-core', 'Run deployment task')
+  .addFlag('sourcify', 'Verify contract on Sourcify')
+  .addFlag('force', 'Ignore previous deployments')
+  .addOptionalParam('key', 'Etherscan API key to verify contracts')
+  .setAction(
+    async (
+      args: { force?: boolean; key?: string; verbose?: boolean; sourcify?: boolean },
+      hre: HardhatRuntimeEnvironment
+    ) => {
+      Logger.setDefaults(false, args.verbose || false);
+
+      const authorizer = '20210418-authorizer';
+      const vault = '20210418-vault';
+      const protocolFeePercentagesProvider = '20220725-protocol-fee-percentages-provider';
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const apiKey = args.key ?? (hre.config.networks[hre.network.name] as any).verificationAPIKey;
+      const verifier = apiKey ? new Verifier(hre.network, apiKey) : undefined;
+      const sourcifyVerifier = args.sourcify ? new SourcifyVerifier(hre.network) : undefined;
+
+      //Deploy Authorizer
+      await new Task(authorizer, TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(args);
+
+      //Deploy Vault
+      await new Task(vault, TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(args);
+
+      //Deploy ProtocolFeePercentagesProvider
+      await new Task(protocolFeePercentagesProvider, TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(
+        args
+      );
+
+      //Deploy WeightedPoolFactory
+      await new Task('20230320-weighted-pool-v4', TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(
+        args
+      );
+
+      //Deploy ComposableStablePoolFactory
+      await new Task(
+        '20240223-composable-stable-pool-v6',
+        TaskMode.LIVE,
+        hre.network.name,
+        verifier,
+        sourcifyVerifier
+      ).run(args);
+
+      //Deploy BatchRelayer
+      await new Task('20231031-batch-relayer-v6', TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(
+        args
+      );
+
+      //Deploy BalancerQueries
+      await new Task('20220721-balancer-queries', TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(
+        args
+      );
+    }
+  );
+
 task('deploy', 'Run deployment task')
   .addParam('id', 'Deployment task ID')
   .addFlag('force', 'Ignore previous deployments')
@@ -443,7 +500,7 @@ export default {
       // ... other configurations specific to this network
     },
     celo: {
-      url: 'https://1rpc.io/celo',
+      url: 'https://rpc.ankr.com/celo',
       chainId: 42220,
       accounts: [PRIVATE_KEY],
       urls: {
@@ -496,8 +553,19 @@ export default {
       chainId: 14801,
       accounts: [PRIVATE_KEY],
       urls: {
-        apiURL: 'https://api.satori.vanascan.io/api/v2',
+        apiURL: 'https://api.satori.vanascan.io/api',
         browserURL: 'https://satori.vanascan.io/',
+      },
+      verificationAPIKey: 'abc',
+    },
+    vanaMoksha: {
+      url: 'https://rpc.moksha.vana.org',
+      chainId: 14800,
+      accounts: [PRIVATE_KEY],
+      gasPrice: 1000000007,
+      urls: {
+        apiURL: 'https://api.vanascan.io/api/',
+        browserURL: 'https://vanascan.io/',
       },
       verificationAPIKey: 'abc',
     },
@@ -551,6 +619,30 @@ export default {
     },
     customChains: [
       {
+        network: 'celo',
+        chainId: 42220,
+        urls: {
+          apiURL: 'https://api.celoscan.io/api',
+          browserURL: 'https://celoscan.io/',
+        },
+      },
+      {
+        network: 'etherlink',
+        chainId: 42793,
+        urls: {
+          apiURL: 'https://explorer.etherlink.com/api',
+          browserURL: 'https://explorer.etherlink.com/',
+        },
+      },
+      {
+        network: 'taiko',
+        chainId: 167000,
+        urls: {
+          apiURL: 'https://api.taikoscan.io/api',
+          browserURL: 'https://taikoscan.io/',
+        },
+      },
+      {
         network: 'artelaTestnet',
         chainId: 11822,
         urls: {
@@ -564,6 +656,14 @@ export default {
         urls: {
           apiURL: 'https://satori.vanascan.io/api',
           browserURL: 'https://satori.vanascan.io/',
+        },
+      },
+      {
+        network: 'vanaMoksha',
+        chainId: 14800,
+        urls: {
+          apiURL: 'https://api.vanascan.io/api/',
+          browserURL: 'https://vanascan.io/',
         },
       },
       {

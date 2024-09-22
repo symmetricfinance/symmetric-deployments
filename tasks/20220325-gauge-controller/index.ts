@@ -10,9 +10,9 @@ export default async (task: Task, { force, from }: TaskRunOptions = {}): Promise
   const gaugeControllerArgs = [veBAL.address, input.AuthorizerAdaptor];
   const gaugeController = await task.deploy('GaugeController', gaugeControllerArgs, from, force);
 
-  // const minterArgs = [input.MSYMMTokenAdmin, gaugeController.address];
-  // console.log(minterArgs);
-  // await task.deployAndVerify('BalancerMinter', minterArgs, from, force);
+  const minterArgs = [input.MSYMMTokenAdmin, gaugeController.address];
+  console.log(minterArgs);
+  await task.deployAndVerify('BalancerMinter', minterArgs, from, force);
 
   const weight = await gaugeController.gauge_relative_weight('0x2b61c7B6b0bd087043d822C35d8F7d28d6Ce0b4b');
 

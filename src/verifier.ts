@@ -169,6 +169,7 @@ export default class Verifier {
 
     let response: Response;
     try {
+      console.log('url', url);
       response = await fetch(url, requestDetails);
     } catch (error: unknown) {
       throw Error(`Failed to send verification request. Reason: ${(error as Error).message}`);

@@ -27,6 +27,7 @@ export const NETWORKS = [
   'kavaTestnet',
   'artelaTestnet',
   'vanaSatori',
+  'vanaMoksha',
   'taiko',
   'etherlink',
   'fraxtal',

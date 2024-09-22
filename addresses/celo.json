@@ -1,0 +1,80 @@
+{
+  "20210418-authorizer": {
+    "contracts": [
+      {
+        "name": "Authorizer",
+        "address": "0x00EDdD9621Fb08436d0331c149D1690909a5906d"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20210418-vault": {
+    "contracts": [
+      {
+        "name": "Vault",
+        "address": "0xc2eb5c675A49F87843c814FE76576d20e10C3CD0"
+      },
+      {
+        "name": "ProtocolFeesCollector",
+        "address": "0xEe1001556cd8089CB37Ca98D55059871AaB1411d"
+      },
+      {
+        "name": "BalancerHelpers",
+        "address": "0x332e0bf729f06C9e08ffA42ABb1312Fcd16289e7"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20220725-protocol-fee-percentages-provider": {
+    "contracts": [
+      {
+        "name": "ProtocolFeePercentagesProvider",
+        "address": "0x266b53bb135f2dbc324b5C5Aa281e84f1C105B26"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20230320-weighted-pool-v4": {
+    "contracts": [
+      {
+        "name": "WeightedPoolFactory",
+        "address": "0x9c9D0025F27756217BDBb584cFB9Dd4aA58B1FEc"
+      },
+      {
+        "name": "MockWeightedPool",
+        "address": "0xcC1AC629a9F26AD936cdb85860b314b43D75bEEe"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20231031-batch-relayer-v6": {
+    "contracts": [
+      {
+        "name": "BatchRelayerLibrary",
+        "address": "0x2320243925EBb4616F4a95319f83cdbEA63bF1a1"
+      },
+      {
+        "name": "BatchRelayerQueryLibrary",
+        "address": "0xD21E0193d86D05DeB4428f1ec208bd116118a018"
+      },
+      {
+        "name": "BalancerRelayer",
+        "address": "0x5eF0C55D578a441A67D489f29C0323b866324014"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20240223-composable-stable-pool-v6": {
+    "contracts": [
+      {
+        "name": "ComposableStablePoolFactory",
+        "address": "0xfff23CDf2e98b6ea6f0ae856e8DeF6Fdb3141dF1"
+      },
+      {
+        "name": "MockComposableStablePool",
+        "address": "0xD9EEcCECC783fE2af90A15350CDDb44ff7f60014"
+      }
+    ],
+    "status": "ACTIVE"
+  }
+}
