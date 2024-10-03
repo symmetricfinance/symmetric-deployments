@@ -26,24 +26,22 @@ export default async (task: Task, { force, from }: TaskRunOptions = {}): Promise
     // }
 
     const poolCreationReceipt = await (
-      await factory.createAndJoinStableSwap(
+      await factory.createStablePool(
         pool.name,
         pool.symbol,
         pool.tokens,
         pool.amplificationParameter,
         pool.rateProviders,
         pool.exemptFees,
-        pool.weiAmountsPerToken,
         pool.swapFeePercentage,
         ZERO_BYTES32
       )
     ).wait();
-    const event = expectEvent.inReceipt(poolCreationReceipt, 'PoolCreated');
-    const poolAddress = event.args.pool;
+    console.log('Pool created for', pool.name, 'at', poolCreationReceipt);
+    // const event = expectEvent.inReceipt(poolCreationReceipt, 'PoolCreated');
+    // const poolAddress = event.args.pool;
 
-    saveContractDeploymentTransactionHash(poolAddress, poolCreationReceipt.transactionHash, task.network);
-    task.save({ [pool.symbol]: poolAddress });
-
-    console.log('Pool created for', pool.name, 'at', poolAddress);
+    // saveContractDeploymentTransactionHash(poolAddress, poolCreationReceipt.transactionHash, task.network);
+    // task.save({ [pool.symbol]: poolAddress });
   }
 };

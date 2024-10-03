@@ -1,0 +1,304 @@
+[
+  {
+    "type": "event",
+    "name": "RewardDistributorUpdated",
+    "inputs": [
+      {
+        "name": "reward_token",
+        "type": "address",
+        "components": null,
+        "internalType": null,
+        "indexed": true
+      },
+      {
+        "name": "distributor",
+        "type": "address",
+        "components": null,
+        "internalType": null,
+        "indexed": false
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "RewardDurationUpdated",
+    "inputs": [
+      {
+        "name": "reward_token",
+        "type": "address",
+        "components": null,
+        "internalType": null,
+        "indexed": true
+      },
+      {
+        "name": "duration",
+        "type": "uint256",
+        "components": null,
+        "internalType": null,
+        "indexed": false
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "constructor",
+    "stateMutability": "nonpayable",
+    "inputs": [
+      {
+        "name": "_bal_token",
+        "type": "address",
+        "components": null,
+        "internalType": null
+      },
+      {
+        "name": "_authorizerAdaptor",
+        "type": "address",
+        "components": null,
+        "internalType": null
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "add_reward",
+    "stateMutability": "nonpayable",
+    "inputs": [
+      {
+        "name": "_token",
+        "type": "address",
+        "components": null,
+        "internalType": null
+      },
+      {
+        "name": "_distributor",
+        "type": "address",
+        "components": null,
+        "internalType": null
+      },
+      {
+        "name": "_duration",
+        "type": "uint256",
+        "components": null,
+        "internalType": null
+      }
+    ],
+    "outputs": []
+  },
+  {
+    "type": "function",
+    "name": "remove_reward",
+    "stateMutability": "nonpayable",
+    "inputs": [
+      {
+        "name": "_token",
+        "type": "address",
+        "components": null,
+        "internalType": null
+      },
+      {
+        "name": "_recipient",
+        "type": "address",
+        "components": null,
+        "internalType": null
+      }
+    ],
+    "outputs": []
+  },
+  {
+    "type": "function",
+    "name": "get_reward",
+    "stateMutability": "nonpayable",
+    "inputs": [],
+    "outputs": []
+  },
+  {
+    "type": "function",
+    "name": "notify_reward_amount",
+    "stateMutability": "nonpayable",
+    "inputs": [
+      {
+        "name": "_token",
+        "type": "address",
+        "components": null,
+        "internalType": null
+      }
+    ],
+    "outputs": []
+  },
+  {
+    "type": "function",
+    "name": "set_reward_duration",
+    "stateMutability": "nonpayable",
+    "inputs": [
+      {
+        "name": "_token",
+        "type": "address",
+        "components": null,
+        "internalType": null
+      },
+      {
+        "name": "_duration",
+        "type": "uint256",
+        "components": null,
+        "internalType": null
+      }
+    ],
+    "outputs": []
+  },
+  {
+    "type": "function",
+    "name": "set_reward_distributor",
+    "stateMutability": "nonpayable",
+    "inputs": [
+      {
+        "name": "_token",
+        "type": "address",
+        "components": null,
+        "internalType": null
+      },
+      {
+        "name": "_distributor",
+        "type": "address",
+        "components": null,
+        "internalType": null
+      }
+    ],
+    "outputs": []
+  },
+  {
+    "type": "function",
+    "name": "initialize",
+    "stateMutability": "nonpayable",
+    "inputs": [
+      {
+        "name": "reward_receiver",
+        "type": "address",
+        "components": null,
+        "internalType": null
+      }
+    ],
+    "outputs": []
+  },
+  {
+    "type": "function",
+    "name": "reward_receiver",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "components": null,
+        "internalType": null
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "reward_tokens",
+    "stateMutability": "view",
+    "inputs": [
+      {
+        "name": "arg0",
+        "type": "uint256",
+        "components": null,
+        "internalType": null
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "components": null,
+        "internalType": null
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "reward_count",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "components": null,
+        "internalType": null
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "reward_data",
+    "stateMutability": "view",
+    "inputs": [
+      {
+        "name": "arg0",
+        "type": "address",
+        "components": null,
+        "internalType": null
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple",
+        "components": [
+          {
+            "name": "distributor",
+            "type": "address",
+            "components": null,
+            "internalType": null
+          },
+          {
+            "name": "period_finish",
+            "type": "uint256",
+            "components": null,
+            "internalType": null
+          },
+          {
+            "name": "rate",
+            "type": "uint256",
+            "components": null,
+            "internalType": null
+          },
+          {
+            "name": "duration",
+            "type": "uint256",
+            "components": null,
+            "internalType": null
+          },
+          {
+            "name": "received",
+            "type": "uint256",
+            "components": null,
+            "internalType": null
+          },
+          {
+            "name": "paid",
+            "type": "uint256",
+            "components": null,
+            "internalType": null
+          }
+        ],
+        "internalType": null
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "last_update_time",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "components": null,
+        "internalType": null
+      }
+    ]
+  }
+]

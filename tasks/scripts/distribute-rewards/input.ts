@@ -33,7 +33,7 @@ const signer = '0x7255Db0d1C1B93Fb756157074fa0613Aa6878F31';
 
 const DistributionScheduler = new Task('20220707-distribution-scheduler', TaskMode.READ_ONLY);
 const FeeDistributionScheduler = new Task('20240529-fee-distribution-scheduler', TaskMode.READ_ONLY);
-const timestamp = BigNumber.from('1726704000');
+const timestamp = BigNumber.from('1727913600');
 
 const approvals = [
   {

@@ -98,6 +98,43 @@ task('deploy-core', 'Run deployment task')
     }
   );
 
+task('deploy-auth', 'Run deployment task')
+  .addFlag('sourcify', 'Verify contract on Sourcify')
+  .addFlag('force', 'Ignore previous deployments')
+  .addOptionalParam('key', 'Etherscan API key to verify contracts')
+  .setAction(
+    async (
+      args: { force?: boolean; key?: string; verbose?: boolean; sourcify?: boolean },
+      hre: HardhatRuntimeEnvironment
+    ) => {
+      Logger.setDefaults(false, args.verbose || false);
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const apiKey = args.key ?? (hre.config.networks[hre.network.name] as any).verificationAPIKey;
+      const verifier = apiKey ? new Verifier(hre.network, apiKey) : undefined;
+      const sourcifyVerifier = args.sourcify ? new SourcifyVerifier(hre.network) : undefined;
+
+      //Deploy Authorizer Adapter
+      await new Task('20220325-authorizer-adaptor', TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(
+        args
+      );
+
+      // Deploy Authorizer Adapter Entrypoint
+      await new Task(
+        '20221124-authorizer-adaptor-entrypoint',
+        TaskMode.LIVE,
+        hre.network.name,
+        verifier,
+        sourcifyVerifier
+      ).run(args);
+
+      // Deploy Authorizer Wrapper
+      await new Task('20230414-authorizer-wrapper', TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(
+        args
+      );
+    }
+  );
+
 task('deploy', 'Run deployment task')
   .addParam('id', 'Deployment task ID')
   .addFlag('force', 'Ignore previous deployments')

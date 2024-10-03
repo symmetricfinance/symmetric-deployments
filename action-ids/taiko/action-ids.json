@@ -36,5 +36,25 @@
         "setFeeTypePercentage(uint256,uint256)": "0x7125d4ca80a3b69e9d43655e5bda9101dab688fa9c7232c5a131d4fd390e020b"
       }
     }
+  },
+  "20240922-points-gauge-factory": {
+    "ChildChainStreamer": {
+      "useAdaptor": true,
+      "actionIds": {
+        "add_reward(address,address,uint256)": "0xe5caf3ddb6c8d9bc0fa68cf259cedada2acd80ba5f8519317930e6aed7be0506",
+        "get_reward()": "0xf90ba7d65e4ebcfcb53a260e17c5daad43dee0441db9bea13741fcb2b5e3fd11",
+        "initialize(address)": "0xdfa7532b515c8a7f4ec4290a81dee72fccddde2ec0b5addf092980f32d94de0b",
+        "notify_reward_amount(address)": "0x55d1a3062e6efadf0585acee4a263aba34b462781e66362d4152777bab89ba3b",
+        "remove_reward(address,address)": "0x2cbf4231afded2b6cebc62ab9ee669bacbfd76b0e289d685c352c2b3f0b0ba7a",
+        "set_reward_distributor(address,address)": "0x46535bb549dd8b0920ebc20d4029e47746b408771f5903a803875f06e6a77536",
+        "set_reward_duration(address,uint256)": "0x9fb3a69eb90bb85a85a022f5399f06085d5ad8b9ad18af913c1eee99299375f2"
+      }
+    },
+    "ChildChainLiquidityGaugeFactory": {
+      "useAdaptor": true,
+      "actionIds": {
+        "create(address)": "0x0a9912b87e3a0d713feacc0bde2dbf8fca31fa73232f75dd01532cb916d8d4c2"
+      }
+    }
   }
 }

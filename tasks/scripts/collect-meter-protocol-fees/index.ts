@@ -25,9 +25,9 @@ export default async (task: Task): Promise<void> => {
 
   console.log('Collected fees:', collectedFees);
 
-  // //Send to Governance
-  // const teamReceipt = await (
-  //   await ProtocolFeesCollector.withdrawCollectedFees(tokens, collectedFees, input.Governance)
-  // ).wait();
-  // console.log('Sent to Governance at tx:', teamReceipt.transactionHash);
+  //Send to Governance
+  const teamReceipt = await (
+    await ProtocolFeesCollector.withdrawCollectedFees(tokens, collectedFees, input.Governance)
+  ).wait();
+  console.log('Sent to Governance at tx:', teamReceipt.transactionHash);
 };

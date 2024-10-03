@@ -25,11 +25,38 @@
     ],
     "status": "ACTIVE"
   },
+  "20220325-authorizer-adaptor": {
+    "contracts": [
+      {
+        "name": "AuthorizerAdaptor",
+        "address": "0x3216EF647DFb90B73176e33fFe34EFF2456813A3"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20220721-balancer-queries": {
+    "contracts": [
+      {
+        "name": "BalancerQueries",
+        "address": "0x45a2992e1bFdCF9b9AcE0a84A238f2E56F481816"
+      }
+    ],
+    "status": "ACTIVE"
+  },
   "20220725-protocol-fee-percentages-provider": {
     "contracts": [
       {
         "name": "ProtocolFeePercentagesProvider",
         "address": "0x698fEa3Aa7DBD323D8D896993fD1EC556D308615"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20221124-authorizer-adaptor-entrypoint": {
+    "contracts": [
+      {
+        "name": "AuthorizerAdaptorEntrypoint",
+        "address": "0x355E2f05C2609780288418dCfEb3f7dE2091aCC2"
       }
     ],
     "status": "ACTIVE"
@@ -43,6 +70,15 @@
       {
         "name": "MockWeightedPool",
         "address": "0xAb9aF7b9fDAaE98487AA77b19D3FFf78Ae426Fa9"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20230414-authorizer-wrapper": {
+    "contracts": [
+      {
+        "name": "AuthorizerWithAdaptorValidation",
+        "address": "0x78578bB72cb24638ddc527d5082e4436159D11f5"
       }
     ],
     "status": "ACTIVE"
@@ -64,11 +100,33 @@
     ],
     "status": "ACTIVE"
   },
+  "20231122-symm-token": {
+    "contracts": [
+      {
+        "name": "SymmToken",
+        "address": "0x9c9D0025F27756217BDBb584cFB9Dd4aA58B1FEc"
+      }
+    ],
+    "status": "ACTIVE"
+  },
   "20240223-composable-stable-pool-v6": {
     "contracts": [
       {
         "name": "ComposableStablePoolFactory",
         "address": "0xFEF39453770fF2C6b2F453D1b6D075623a79e3Eb"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20240922-points-gauge-factory": {
+    "contracts": [
+      {
+        "name": "ChildChainStreamer",
+        "address": "0xdfFD6094ACa1A90f3064BB265e87245dD6f12e68"
+      },
+      {
+        "name": "ChildChainLiquidityGaugeFactory",
+        "address": "0x6cf35FD1c4649E94DFD11f5ab48e0a48D1211B3a"
       }
     ],
     "status": "ACTIVE"

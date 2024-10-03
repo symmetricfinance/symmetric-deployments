@@ -48,8 +48,13 @@ const tokens = {
     symbol: 'USDC',
     decimals: 6,
   },
-  USDT: {
+  'USDT.e': {
     address: '0x9c2dc7377717603eb92b2655c5f2e7997a4945bd',
+    symbol: 'USDT',
+    decimals: 6,
+  },
+  USDT: {
+    address: '0x2def195713cf4a606b49d07e520e22c17899a736',
     symbol: 'USDT',
     decimals: 6,
   },
@@ -66,15 +71,66 @@ const tokens = {
 };
 
 const pools = [
+  // {
+  //   name: 'USDC-USDT Stable Pool',
+  //   symbol: 'USDC-USDT',
+  //   tokens: [tokens.USDC.address, tokens['USDT.e'].address], //USDC-USDC.e
+  //   rateProviders: [ZERO_ADDRESS, ZERO_ADDRESS],
+  //   weiAmountsPerToken: [bn(1e6), bn(1e6)],
+  //   swapFeePercentage: bn(10),
+  //   amplificationParameter: bn(500),
+  //   exemptFees: false,
+  // },
   {
-    name: 'USDC-USDC.e',
-    symbol: 'USDC-USDC.e',
-    tokens: [tokens.USDC.address, tokens['USDC.e'].address], //USDC-USDC.e
+    name: 'USDC-USDT Stable Pool',
+    symbol: 'USDC-USDT',
+    tokens: [tokens.USDC.address, tokens['USDT'].address], //USDC-USDC.e
     rateProviders: [ZERO_ADDRESS, ZERO_ADDRESS],
     weiAmountsPerToken: [bn(1e6), bn(1e6)],
     swapFeePercentage: bn(10),
     amplificationParameter: bn(500),
     exemptFees: false,
+  },
+  {
+    name: 'USDT-USDT Stable Pool',
+    symbol: 'USDT-USDT',
+    tokens: [tokens.USDT.address, tokens['USDT.e'].address], //USDC-USDC.e
+    rateProviders: [ZERO_ADDRESS, ZERO_ADDRESS],
+    weiAmountsPerToken: [bn(1e6), bn(1e6)],
+    swapFeePercentage: bn(10),
+    amplificationParameter: bn(500),
+    exemptFees: false,
+  },
+  {
+    name: 'USDC.e-USDT',
+    symbol: 'USDC-USDT',
+    tokens: [tokens['USDC.e'].address, tokens['USDT.e'].address], //USDC-USDC.e
+    rateProviders: [ZERO_ADDRESS, ZERO_ADDRESS],
+    weiAmountsPerToken: [bn(1e6), bn(1e6)],
+    swapFeePercentage: bn(10),
+    amplificationParameter: bn(500),
+    exemptFees: false,
+  },
+  {
+    name: 'USDC.e-USDT Stable Pool',
+    symbol: 'USDC-USDT',
+    tokens: [tokens['USDC.e'].address, tokens['USDT'].address], //USDC-USDC.e
+    rateProviders: [ZERO_ADDRESS, ZERO_ADDRESS],
+    weiAmountsPerToken: [bn(1e6), bn(1e6)],
+    swapFeePercentage: bn(10),
+    amplificationParameter: bn(500),
+    exemptFees: false,
+  },
+];
+
+const weightedPools = [
+  {
+    name: 'WETH-USDC.e Weighted Pool',
+    symbol: '50WETH-50USDC.e',
+    tokens: [tokens.WETH.address, tokens.TAIKO.address],
+    rateProviders: [ZERO_ADDRESS, ZERO_ADDRESS],
+    weights: [bn(50), bn(50)],
+    swapFeePercentage: bn(30),
   },
 ];
 
