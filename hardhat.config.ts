@@ -61,30 +61,30 @@ task('deploy-core', 'Run deployment task')
       const verifier = apiKey ? new Verifier(hre.network, apiKey) : undefined;
       const sourcifyVerifier = args.sourcify ? new SourcifyVerifier(hre.network) : undefined;
 
-      //Deploy Authorizer
-      await new Task(authorizer, TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(args);
+      // //Deploy Authorizer
+      // await new Task(authorizer, TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(args);
 
-      //Deploy Vault
-      await new Task(vault, TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(args);
+      // //Deploy Vault
+      // await new Task(vault, TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(args);
 
-      //Deploy ProtocolFeePercentagesProvider
-      await new Task(protocolFeePercentagesProvider, TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(
-        args
-      );
+      // //Deploy ProtocolFeePercentagesProvider
+      // await new Task(protocolFeePercentagesProvider, TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(
+      //   args
+      // );
 
-      //Deploy WeightedPoolFactory
-      await new Task('20230320-weighted-pool-v4', TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(
-        args
-      );
+      // //Deploy WeightedPoolFactory
+      // await new Task('20230320-weighted-pool-v4', TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(
+      //   args
+      // );
 
       //Deploy ComposableStablePoolFactory
-      await new Task(
-        '20240223-composable-stable-pool-v6',
-        TaskMode.LIVE,
-        hre.network.name,
-        verifier,
-        sourcifyVerifier
-      ).run(args);
+      // await new Task(
+      //   '20240223-composable-stable-pool-v6',
+      //   TaskMode.LIVE,
+      //   hre.network.name,
+      //   verifier,
+      //   sourcifyVerifier
+      // ).run(args);
 
       //Deploy BatchRelayer
       await new Task('20231031-batch-relayer-v6', TaskMode.LIVE, hre.network.name, verifier, sourcifyVerifier).run(
@@ -518,6 +518,12 @@ export default {
       accounts: [PRIVATE_KEY],
       // ... other configurations specific to this network
     },
+    telos2: {
+      url: 'https://rpc.telos.net',
+      chainId: 40,
+      accounts: [PRIVATE_KEY],
+      // ... other configurations specific to this network
+    },
     telosTestnet: {
       url: 'https://testnet.telos.net/evm',
       chainId: 41,
@@ -595,6 +601,16 @@ export default {
       },
       verificationAPIKey: 'abc',
     },
+    vana: {
+      url: 'https://empty-green-layer.vana-mainnet.quiknode.pro/3c87e7896ce3b9b4543f43e61b1b1d61fc5ba43f',
+      chainId: 1480,
+      accounts: [PRIVATE_KEY],
+      urls: {
+        apiURL: 'https://api.vanascan.io/api/',
+        browserURL: 'https://vanascan.io/',
+      },
+      verificationAPIKey: 'abc',
+    },
     vanaMoksha: {
       url: 'https://rpc.moksha.vana.org',
       chainId: 14800,
@@ -623,6 +639,16 @@ export default {
       urls: {
         apiURL: 'hhttps://explorer.etherlink.com/api',
         browserURL: 'https://explorer.etherlink.com/',
+      },
+      verificationAPIKey: 'abc',
+    },
+    artela: {
+      url: 'https://node-hongkong.artela.network/rpc',
+      chainId: 11820,
+      accounts: [PRIVATE_KEY],
+      urls: {
+        apiURL: 'https://artscan.artela.network/api',
+        browserURL: 'https://artscan.artela.network/',
       },
       verificationAPIKey: 'abc',
     },
@@ -704,6 +730,14 @@ export default {
         },
       },
       {
+        network: 'vana',
+        chainId: 1480,
+        urls: {
+          apiURL: 'https://api.vanascan.io/api/',
+          browserURL: 'https://vanascan.io/',
+        },
+      },
+      {
         network: 'zkemv',
         chainId: 1101,
         urls: {
@@ -733,6 +767,14 @@ export default {
         urls: {
           apiURL: 'https://api.routescan.io/v2/network/mainnet/evm/34443/etherscan',
           browserURL: 'https://modescan.io',
+        },
+      },
+      {
+        network: 'artela',
+        chainId: 11820,
+        urls: {
+          apiURL: 'https://artscan.artela.network/api',
+          browserURL: 'https://artscan.artela.network/',
         },
       },
     ],

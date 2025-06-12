@@ -33,12 +33,12 @@ const signer = '0x7255Db0d1C1B93Fb756157074fa0613Aa6878F31';
 
 const DistributionScheduler = new Task('20220707-distribution-scheduler', TaskMode.READ_ONLY);
 const FeeDistributionScheduler = new Task('20240529-fee-distribution-scheduler', TaskMode.READ_ONLY);
-const timestamp = BigNumber.from('1727913600');
+const timestamp = BigNumber.from('1739404800');
 
 const approvals = [
   {
     token: '0xD102cE6A4dB07D247fcc28F366A623Df0938CA9E',
-    amount: BigNumber.from('3586956521739130000000'),
+    amount: BigNumber.from('5706521739130440000000'),
   },
   {
     token: '0x8f7D64ea96D729EF24a0F30b4526D47b80d877B9',
@@ -49,7 +49,7 @@ const approvals = [
 const veApprovals = [
   {
     token: '0xD102cE6A4dB07D247fcc28F366A623Df0938CA9E',
-    amount: BigNumber.from('1913043478260870000000'),
+    amount: BigNumber.from('3043478260869570000000'),
   },
   {
     token: '0x8f7D64ea96D729EF24a0F30b4526D47b80d877B9',
@@ -64,7 +64,7 @@ const rewards = [
       token: '0xD102cE6A4dB07D247fcc28F366A623Df0938CA9E',
       tokenSymbol: 'WTLOS',
       gauge: '0xa9d436ab58989354a5c3705f24a5130779055e47',
-      rate: BigNumber.from('956521739130436000000'),
+      rate: BigNumber.from('1521739130434780000000'),
       period_finish: 0,
       decimals: 18,
     },
@@ -75,7 +75,7 @@ const rewards = [
       token: '0xD102cE6A4dB07D247fcc28F366A623Df0938CA9E',
       tokenSymbol: 'WTLOS',
       gauge: '0xe4c412962fab7f2d406c43a8da95c68f9d60f24e',
-      rate: BigNumber.from('717391304347826000000'),
+      rate: BigNumber.from('1141304347826090000000'),
       period_finish: 0,
       decimals: 18,
     },
@@ -86,7 +86,7 @@ const rewards = [
       token: '0xD102cE6A4dB07D247fcc28F366A623Df0938CA9E',
       tokenSymbol: 'WTLOS',
       gauge: '0xec678e92afe25bc5ba4bc2e1ff386c775270e49e',
-      rate: BigNumber.from('1913043478260868000000'),
+      rate: BigNumber.from('3043478260869570000000'),
       period_finish: 0,
       decimals: 18,
     },
@@ -108,7 +108,7 @@ const veRewards = [
     token: '0xD102cE6A4dB07D247fcc28F366A623Df0938CA9E',
     tokenSymbol: 'WTLOS',
     feeDistributor: '0x75d71288F0181a5c1C9f8c81755846954C37433A',
-    rate: BigNumber.from('1913043478260868000000'),
+    rate: BigNumber.from('3043478260869570000000'),
     period_finish: 0,
     decimals: 18,
   },

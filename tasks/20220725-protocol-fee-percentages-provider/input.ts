@@ -9,7 +9,7 @@ export type ProtocolFeePercentagesProviderDeployment = {
 };
 
 const Vault = new Task('20210418-vault', TaskMode.READ_ONLY);
-const maxYieldValue = fp(0.5);
+const maxYieldValue = fp(1.0);
 const maxAUMValue = fp(0.5);
 
 export default {

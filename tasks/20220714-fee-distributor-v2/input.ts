@@ -5,7 +5,8 @@ export type FeeDistributorDeployment = {
   startTime: number;
 };
 
-const VotingEscrow = new Task('20220325-gauge-controller', TaskMode.READ_ONLY);
+// const VotingEscrow = new Task('20220325-gauge-controller', TaskMode.READ_ONLY);
+const VotingEscrow = new Task('20250128-symmetric-voting-escrow', TaskMode.READ_ONLY);
 
 export default {
   VotingEscrow,
@@ -23,5 +24,8 @@ export default {
   },
   meter: {
     startTime: 1713398400, // Thursday, April 18 2024 00:00:00 UTC
+  },
+  artela: {
+    startTime: 1738195200, // Thursday, January 29 2025 00:00:00 UTC
   },
 };

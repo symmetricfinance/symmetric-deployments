@@ -1,0 +1,205 @@
+{
+  "20210418-authorizer": {
+    "contracts": [
+      {
+        "name": "Authorizer",
+        "address": "0x00EDdD9621Fb08436d0331c149D1690909a5906d"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20210418-vault": {
+    "contracts": [
+      {
+        "name": "Vault",
+        "address": "0xc2a0d530e57B1275fbce908031DA636f95EA1E38"
+      },
+      {
+        "name": "ProtocolFeesCollector",
+        "address": "0xF5C36b6b91bb20d7caf97b5c21503A2FcCaAC597"
+      },
+      {
+        "name": "BalancerHelpers",
+        "address": "0x698fEa3Aa7DBD323D8D896993fD1EC556D308615"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20220325-authorizer-adaptor": {
+    "contracts": [
+      {
+        "name": "AuthorizerAdaptor",
+        "address": "0x611b8E5c7ec8ee0c7bD5f2B6E9DfD44fbED8A427"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20220325-ve-delegation": {
+    "contracts": [
+      {
+        "name": "VotingEscrowDelegation",
+        "address": "0xf9D31D275894b6CE8AAb833a2d5EFb8338Cfa818"
+      },
+      {
+        "name": "VotingEscrowDelegationProxy",
+        "address": "0xd5f2a24199C3DFc44C1Bf8B1C01aB147809434Ca"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20220714-fee-distributor-v2": {
+    "contracts": [
+      {
+        "name": "FeeDistributor",
+        "address": "0x71234Fa964a99D8A3a839f763C40132B61964716"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20220721-balancer-queries": {
+    "contracts": [
+      {
+        "name": "BalancerQueries",
+        "address": "0xfff23CDf2e98b6ea6f0ae856e8DeF6Fdb3141dF1"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20220725-protocol-fee-percentages-provider": {
+    "contracts": [
+      {
+        "name": "ProtocolFeePercentagesProvider",
+        "address": "0x4e4131dC27ed9501ac5fEb76F94572fDAe9f0fD0"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20221124-authorizer-adaptor-entrypoint": {
+    "contracts": [
+      {
+        "name": "AuthorizerAdaptorEntrypoint",
+        "address": "0x2320243925EBb4616F4a95319f83cdbEA63bF1a1"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20230316-l2-balancer-pseudo-minter": {
+    "contracts": [
+      {
+        "name": "L2BalancerPseudoMinter",
+        "address": "0xBc54d564A12EB444b2daA708Cf9c119d3c2D06a3"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20230316-l2-ve-delegation-proxy": {
+    "contracts": [
+      {
+        "name": "VotingEscrowDelegationProxy",
+        "address": "0x12A313C7B3Bc82DDD6C90908E075d5A290B2268c"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20230320-weighted-pool-v4": {
+    "contracts": [
+      {
+        "name": "WeightedPoolFactory",
+        "address": "0xc2eb5c675A49F87843c814FE76576d20e10C3CD0"
+      },
+      {
+        "name": "MockWeightedPool",
+        "address": "0x1DA7713e6e30C070595889506dd61dA898613cfb"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20230414-authorizer-wrapper": {
+    "contracts": [
+      {
+        "name": "AuthorizerWithAdaptorValidation",
+        "address": "0x45a2992e1bFdCF9b9AcE0a84A238f2E56F481816"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20231031-batch-relayer-v6": {
+    "contracts": [
+      {
+        "name": "BatchRelayerLibrary",
+        "address": "0x4fE18fde71267c46d6DDeecc412cd498e88b39Cb"
+      },
+      {
+        "name": "BatchRelayerQueryLibrary",
+        "address": "0x8836a79C28605E62403f1C39A9bC4Ca9aD8C170A"
+      },
+      {
+        "name": "BalancerRelayer",
+        "address": "0x2abb00f1168660B5f0A611810597410aEd0A7efc"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20231122-symm-token": {
+    "contracts": [
+      {
+        "name": "SymmToken",
+        "address": "0xdd58D43a829067129B8C37f1924D31B1896ac0C6"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20240223-composable-stable-pool-v6": {
+    "contracts": [
+      {
+        "name": "ComposableStablePoolFactory",
+        "address": "0x266b53bb135f2dbc324b5C5Aa281e84f1C105B26"
+      },
+      {
+        "name": "MockComposableStablePool",
+        "address": "0x47eabb60e1e921aad02faa93b2114ed1ab8c5127"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20250116-erc4626-rate-provider-factory": {
+    "contracts": [
+      {
+        "name": "ERC4626RateProviderFactory",
+        "address": "0x118952f33ADfc4b0805f9a049902460f667E9692"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20250128-no-token-admin-gauge-factory": {
+    "contracts": [
+      {
+        "name": "NoTokenAdminGauge",
+        "address": "0x380a61eB6E92aa4e4E1D028268790c6F2d113866"
+      },
+      {
+        "name": "NoTokenAdminGaugeFactory",
+        "address": "0x34151e6eFDa2bf004CD854F9D167cDBA654476DD"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20250128-symmetric-gauge-controller": {
+    "contracts": [
+      {
+        "name": "GaugeController",
+        "address": "0xFB4662e6D86AF1133C2fbcdCb294e41AC49AF92f"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  "20250128-symmetric-voting-escrow": {
+    "contracts": [
+      {
+        "name": "VotingEscrow",
+        "address": "0xD382DF79c1B1D50Fb77E3B5f6fE900892c6dCE5A"
+      }
+    ],
+    "status": "ACTIVE"
+  }
+}

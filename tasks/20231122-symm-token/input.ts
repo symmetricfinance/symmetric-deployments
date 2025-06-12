@@ -45,4 +45,9 @@ export default {
     symbol: 'tkSYMM',
     Admin: '0x7255Db0d1C1B93Fb756157074fa0613Aa6878F31',
   },
+  artela: {
+    name: 'Symmetric on Artela',
+    symbol: 'aSYMM',
+    Admin: '0x7255Db0d1C1B93Fb756157074fa0613Aa6878F31',
+  },
 };

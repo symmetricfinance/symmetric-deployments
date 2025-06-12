@@ -4,9 +4,12 @@ export type GaugeSystemDeployment = {
   BPT: string;
   MSYMMTokenAdmin: string;
   AuthorizerAdaptor: string;
+  tokenAdmin: string;
+  veSymbol: string;
 };
 
 const AuthorizerAdaptor = new Task('20220325-authorizer-adaptor', TaskMode.READ_ONLY);
+const TSYMMTokenAdmin = new Task('20220325-balancer-token-admin', TaskMode.READ_ONLY);
 const MSYMMTokenAdmin = new Task('20220325-balancer-token-admin', TaskMode.READ_ONLY);
 
 export default {
@@ -20,11 +23,16 @@ export default {
   },
   telos: {
     BPT: '0xbf0FA44e5611C31429188B7dcc59ffe794D1980e',
+    tokenAdmin: TSYMMTokenAdmin,
+    veSymbol: 'vtSYMM',
   },
   meter: {
     BPT: '0xabbcd1249510a6afb5d1e6d055bf86637e7dad63',
+    tokenAdmin: MSYMMTokenAdmin,
+    veSymbol: 'vmSYMM',
   },
   telosTestnet: {
     BPT: '0x037D0B5511eFF40fF31dA11A9A0619efC3B87EC9', // SPT of an 80-20 SYMM-TLOS Pool using test SYMM
   },
 };
+

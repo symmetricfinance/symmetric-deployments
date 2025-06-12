@@ -34,6 +34,11 @@ export default {
     BalancerMinter,
     CanCallUserCheckpoint: false,
   },
+  telos2: {
+    wstETH: ZERO_ADDRESS,
+    BalancerMinter: ZERO_ADDRESS,
+    CanCallUserCheckpoint: false,
+  },
   meter: {
     wstETH: ZERO_ADDRESS,
     BalancerMinter,
@@ -88,6 +93,11 @@ export default {
     wstETH: ZERO_ADDRESS,
     BalancerMinter: L2BalancerPseudoMinter.output({ network: 'base' }).L2BalancerPseudoMinter,
     CanCallUserCheckpoint: true,
+  },
+  artela: {
+    wstETH: ZERO_ADDRESS,
+    BalancerMinter: ZERO_ADDRESS,
+    CanCallUserCheckpoint: false,
   },
   artelaTestnet: {
     wstETH: ZERO_ADDRESS,

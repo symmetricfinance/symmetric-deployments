@@ -40,33 +40,39 @@ export default {
     admin: '0x4f22C2784Cbd2B24a172566491Ee73fee1A63c2e',
   },
   telos: {
-    admin: '0x7255Db0d1C1B93Fb756157074fa0613Aa6878F31',
+    admin: '0xa29F1CA1957c164877F6A277C9791ACA3Ad4BD6D',
+  },
+  telos2: {
+    admin: '0xa29F1CA1957c164877F6A277C9791ACA3Ad4BD6D',
   },
   telosTestnet: {
     admin: '0xc9C388255295929E02C59e86Aa9EeFeA076307F9',
   },
   meterTestnet: {
-    admin: '0x7255Db0d1C1B93Fb756157074fa0613Aa6878F31',
+    admin: '0x70d33e7568Fc3cbCc0f202E4a2d71eBDF7B84DA8',
   },
   meter: {
-    admin: '0x7255Db0d1C1B93Fb756157074fa0613Aa6878F31',
+    admin: '0x70d33e7568Fc3cbCc0f202E4a2d71eBDF7B84DA8',
+  },
+  artela: {
+    admin: '0x70d33e7568Fc3cbCc0f202E4a2d71eBDF7B84DA8',
   },
   artelaTestnet: {
     admin: '0x91382D68A668D541C9d5Cdb4fCe62d8A1Eb87b56',
   },
   vanaSatori: {
-    admin: '0x7255Db0d1C1B93Fb756157074fa0613Aa6878F31',
+    admin: '0x70d33e7568Fc3cbCc0f202E4a2d71eBDF7B84DA8',
   },
   vanaMoksha: {
-    admin: '0x7255Db0d1C1B93Fb756157074fa0613Aa6878F31',
+    admin: '0x70d33e7568Fc3cbCc0f202E4a2d71eBDF7B84DA8',
   },
   celo: {
-    admin: '0x7255Db0d1C1B93Fb756157074fa0613Aa6878F31',
+    admin: '0x70d33e7568Fc3cbCc0f202E4a2d71eBDF7B84DA8',
   },
   etherlink: {
-    admin: '0x7255Db0d1C1B93Fb756157074fa0613Aa6878F31',
+    admin: '0x70d33e7568Fc3cbCc0f202E4a2d71eBDF7B84DA8',
   },
   taiko: {
-    admin: '0x7255Db0d1C1B93Fb756157074fa0613Aa6878F31',
+    admin: '0x70d33e7568Fc3cbCc0f202E4a2d71eBDF7B84DA8',
   },
 };
