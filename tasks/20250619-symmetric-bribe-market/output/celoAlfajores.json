@@ -1,0 +1,6 @@
+{
+  "RewardDistributor": "0x60DcBeC73d95ab9E823b0eE7343003df121AA478",
+  "BribeVault": "0x16A3793F3B62C285B7d5dcb36cc4652FF2a46d2A",
+  "BribeMarket": "0xDfbC5147753e51a44afa94F0B41C50b26faD076F",
+  "BribeFactory": "0x16e1e5B8baEdea993466532bb86474847002380a"
+}
